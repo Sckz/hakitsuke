@@ -99,7 +99,7 @@ client.on('message', message =>{
 client.on("message", async message => {
     console.log(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.username}: ${message.content}`)
     if(message.author.bot) return;
-    let channel = message.guild.channels.get(727943888777773097)
+    const channel = client.channels.find('name', "💬messages")
     channel.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.username}: ${message.content}`)
 });
 client.login(process.env.TOKEN);
