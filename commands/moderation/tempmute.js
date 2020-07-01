@@ -7,7 +7,7 @@ module.exports = {
     description: "Rendre temporairement muet un utilisateur.",
     usage: "<utilisateur> <temps(s/m/h)> [raison]",
     run: async (client, message, args) => {
-        message.channel.bulkDelete(parseInt(5))
+        message.channel.bulkDelete(parseInt(1))
         var tmReason = args.slice(2).join(' ')
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("> Vous n'avez pas la permission").then(m => m.delete(5000));
         var membre = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
