@@ -97,9 +97,8 @@ client.on('message', message =>{
 })
 
 client.on("message", async message => {
-    console.log(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.username}: ${message.content}`)
     if(message.author.bot) return;
     const channel = client.channels.find('name', "💬messages")
-    channel.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.username}: ${message.content}`)
+    channel.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author}: ${message.content}`)
 });
 client.login(process.env.TOKEN);
