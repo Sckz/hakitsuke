@@ -24,7 +24,9 @@ module.exports = {
          .setDescription(member.user.username + ` a été bannis 🔨 !`)
          .addField(`📌 Modérateur: `, message.author.tag)
          .addField('📄 Raison :', banReason)
-         .setFooter(`Log Modération || Limen by Sckz`)
+         .setFooter(`Log Modération`)
          .setTimestamp()
+        const channel = client.channels.find('name', "🚫・sanctions")
+        channel.send(embed)
     }
 }
