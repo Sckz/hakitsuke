@@ -28,8 +28,8 @@ module.exports = {
          .setTitle(`**${item}**`)
          .setColor(16639033)
          .setDescription(`*Veuillez réagir avec 🎉 pour participer.*\n__**Fin dans:**__ ${time}\n__**Hôte**__ : ${message.author.username}`)
-         .setAuthor("🎉 VIBES GIVEAWAY 🎉", client.user.displayAvatarURL)
-         .setFooter("Vibes by Sckz", client.user.displayAvatarURL)
+         .setAuthor("🎉GIVEAWAY 🎉", client.user.displayAvatarURL)
+         .setFooter("Hakitsuke ✨", client.user.displayAvatarURL)
          .setTimestamp("")
         
         var embedSend = await message.channel.send(giveawayEmbed);
