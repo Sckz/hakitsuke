@@ -6,7 +6,7 @@ const warns = JSON.parse(fs.readFileSync('./warns.json'))
 var date = new Date().getTime();
 const moment = require("moment")
 const ms = require("ms")
-const prefix = "!!"
+const prefix = "/"
 const usersMap = new Map();
 
 const client = new Client({
