@@ -7,6 +7,7 @@ module.exports = {
     description: "Bannir temporairement un utilisateur",
     usage: "<utilisateur> <temps(s/m/h)> [raison]",
     run: async (client, message, args) => {
+        message.channel.bulkDelete(parseInt(1))
         if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("> Vous n'avez pas la permission !").then(m => m.delete(5000));
         var member = message.guild.member(message.mentions.users.first());
         if (!member) return message.channel.send("> Vous devez mentionner un utilisateur !").then(m => m.delete(5000));
