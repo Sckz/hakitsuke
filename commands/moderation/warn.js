@@ -13,7 +13,7 @@ module.exports = {
                 if (!member) return message.channel.send("> Veuillez mentionner un utilisateur !").then(m => m.delete(5000));
                 if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send("> Vous ne pouvez pas warn cet utilisateur !").then(m => m.delete(5000));
                 let warnreason = args.slice(1).join(' ')
-                if (!warnreason) return warnreason = "Aucune"
+                if (!warnreason) return;
                 if (!warns[member.id]) {
                     warns[member.id] = []
                 }
