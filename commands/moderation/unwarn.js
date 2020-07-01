@@ -8,6 +8,7 @@ module.exports = {
     description: "Enlever le dernier avertissement d'un utilisateur",
     usage: "<utilisateur>",
     run: async (client, message, args) => {
+        message.channel.bulkDelete(parseInt(1))
         let member = message.mentions.members.first()
         if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("> Vous n'avez pas la permission d'utiliser cette commande.").then(m => m.delete(5000));
         if(!member) return message.channel.send("> Membre introuvable")
