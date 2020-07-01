@@ -26,8 +26,10 @@ module.exports = {
              .setDescription(member.user.username + ` a été rendu muet 🔕!`)
              .addField(`📌 Modérateur: `, message.author.tag)
              .addField('📄 Raison :', muteReason)
-             .setFooter(`Log Modération  || Limen by Sckz`)
+             .setFooter(`Log Modération`)
              .setTimestamp()
+            const channel = client.channels.find('name', "🚫・sanctions")
+            channel.send(embed)
         }
         else {
             message.guild.createRole({name: 'Muted', permissions: 0}).then((role) => {
