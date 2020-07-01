@@ -6,6 +6,7 @@ module.exports = {
     description: "Rendre muet un utilisateur.",
     usage: "<utilisateur> [raison]",
     run: async (client, message, args) => {
+        message.channel.bulkDelete(parseInt(1))
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("> Vous n'avez pas la permission !").then(m => m.delete(5000));
         let member = message.mentions.members.first()
         if (!member) return message.channel.send("> Veuillez mentionner un utilisateur !").then(m => m.delete(5000));
