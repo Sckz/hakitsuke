@@ -55,18 +55,47 @@ client.on("message", async message => {
 });
 //Join
 client.on('guildMemberAdd', member => {
-    let vibes = member.guild.channels.get('707293025457406054')
-    let cvibes = member.guild.channels.get('710134894231158891')
-    let vibesftn = member.guild.channels.get('710076673818755103')
-    let cvibesftn = member.guild.channels.get('710129814815768627')
+    let r0 = member.guild.roles.find(role => role.name === '___________________')
+    let r1 = member.guild.roles.find(role => role.name === '___________________')
+    let r2 = member.guild.roles.find(role => role.name === '___________________')
+    let r3 = member.guild.roles.find(role => role.name === '___________________')
+    member.addRole(r0)
+    member.addRole(r1)
+    member.addRole(r2)
+    member.addRole(r3)
 });
 //Leave
 client.on('guildMemberRemove', member => {
-    let vibes = member.guild.channels.get('707293025457406054')
-    let cvibes = member.guild.channels.get('710134894231158891')
-    let vibesftn = member.guild.channels.get('710076673818755103')
-    let cvibesftn = member.guild.channels.get('710129814815768627')
 });
+client.on('message', message =>{
+    if (message.author.bot) return;
+
+    if(usersMap.has(message.author.id)) {
+        const userData = usersMap.get(message.author.id)
+        let msgCount = userData.msgCount;
+        var membre = message.guild.member(message.author);
+
+         if(parseInt(msgCount) === 5) {
+            message.channel.bulkDelete(parseInt(5))
+            message.channel.send(`> ${membre} vos messages ont été supprimés pour **__Spam__**. :white_check_mark:`)
+        } else {
+            msgCount++;
+            userData.msgCount = msgCount; 
+            usersMap.set(message.author.id, userData);
+        }
+    }
+    else {
+        usersMap.set(message.author.id, {
+            msgCount: 1,
+            lastMessage: message,
+            timer: null
+        })
+        setTimeout(() => {
+            usersMap.delete(message.author.id)
+        }, 5000);
+    }
+})
+
 client.on("message", async message => {
     console.log(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.username}: ${message.content}`)
 });
