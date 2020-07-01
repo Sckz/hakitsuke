@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
-const warns = JSON.parse(fs.readFileSync('./warns.json'))
 const fs = require("fs")
+const warns = JSON.parse(fs.readFileSync('./warns.json'))
 
 module.exports = {
     name: "infractions",
