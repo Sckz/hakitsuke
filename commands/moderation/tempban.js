@@ -33,8 +33,10 @@ module.exports = {
          .setDescription(member + ` a été bannis 🔨 !`)
          .addField(`📌 Modérateur: `, message.author.tag)
          .addField('📄 Raison :', `**__ ${reason}__**`)
-         .setFooter(`Log Modération || Limen by Sckz`)
+         .setFooter(`Log Modération`)
          .setTimestamp()
+        const channel = client.channels.find('name', "🚫・sanctions")
+        channel.send(embed)
         //
         let embedsend = new Discord.RichEmbed()
          .setColor('DARK_RED')
