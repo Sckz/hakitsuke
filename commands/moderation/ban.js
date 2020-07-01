@@ -6,6 +6,7 @@ module.exports = {
     description: "Bannir un utilisateur",
     usage: "<user> [reason]",
     run: async (client, message, args) => {
+        message.channel.bulkDelete(parseInt(1))
         if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("> Vous n'avez pas la permission !")
         let member = message.mentions.members.first()
         let banReason = args.slice(1).join(' ')
