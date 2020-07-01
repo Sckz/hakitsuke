@@ -6,6 +6,7 @@ module.exports = {
     description: "Expulser un utilisateur.",
     usage: "<utilisateur> [raison]",
     run: async (client, message, args) => {
+        message.channel.bulkDelete(parseInt(5))
         if (!message.member.hasPermission('KICK_MEMBERS')) return message.channel.send("> Vous n'avez pas la permission !").then(m => m.delete(5000));
         let member = message.mentions.members.first()
         let kickReason = args.slice(1).join(' ')
