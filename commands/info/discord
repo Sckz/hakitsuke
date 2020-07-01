@@ -1,0 +1,17 @@
+const Discord = require("discord.js")
+
+module.exports = {
+    name: "limen",
+    aliases: ["discord"],
+    category: "info",
+    description: "Lien du discord de Limen.",
+    run: async (client, message, args) => {
+        let embed = new Discord.RichEmbed()
+        .setColor("BLUE")
+        .setTitle("Limen's Discord")
+        .setDescription("https://discord.club/i/Limen")
+        .setFooter("Limen by Sckz")
+        .setTimestamp()
+       message.author.send(embed)
+    }
+}

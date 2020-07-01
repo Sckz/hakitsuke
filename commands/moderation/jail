@@ -1,0 +1,52 @@
+const Discord = require("discord.js")
+
+module.exports = {
+    name: "jail",
+    aliases: ["prison"],
+    category: "moderation",
+    description: "Emprisonner temporairement un utilisateur",
+    usage: "<utilisateur> <temps(s/m/h)> [raison]",
+    run: async (client, message, args) => {
+        var tmReason = args.slice(3).join(' ')
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("> Vous n'avez pas la permission")
+        var membre = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        if (!membre) return message.channel.send("> Vous devez mentionner un utilisateur")
+        if (membre.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send("> Vous ne pouvez pas mute cet utilisateur !")
+
+        var pRole = message.guild.roles.find("name", "Jailed")
+        if (!pRole) return message.channel.send("> Le rôle **Jailed** n'éxiste pas !")
+
+        var pTime = args[2]; 
+        if(!pTime) return message.channel.send("> Désolé, vous devez définir un temps.")
+        if (pRole) {
+            if (!tmReason) return tmReason = "Aucune raison définit"
+            membre.addRole(pRole);
+            message.channel.send(`> **${membre}** a été mis en prison pendant **${pTime}** pour **__${tmReason}__** :white_check_mark:`) 
+            membre.send(`> 🔒 Vous avez été mis en prison pendant **${pTime}** pour __**${tmReason}**__ 🔒`)
+            setTimeout(function () {
+                membre.removeRole(pRole);
+                message.channel.send(`**${membre}** n'est plus en prison ! :white_check_mark: !`)
+            }, ms(pTime));
+            let embed = new Discord.RichEmbed()
+             .setColor('RED')
+             .setTitle(`JAIL`)
+             .setAuthor(client.user.tag, client.user.displayAvatarURL)
+             .setThumbnail(membre.user.displayAvatarURL)
+             .setDescription(membre.user.username + ` a été mis en prison!`)
+             .addField(`📌 Modérateur: `, message.author.tag)
+             .addField('📄 Raison :', tmReason)
+             .setFooter(`Log Modération  || Limen by Sckz`)
+             .setTimestamp()
+        }
+        else {
+            message.guild.createRole({name: 'Jail', permissions: 0}).then((role) => {
+                message.guild.channels.filter(channel => channel.type === 'text').forEach(channel => {
+                    channel.overwritePermissions(role, {
+                        SEND_MESSAGES: false
+                    })
+                })
+                member.addRole(role)
+            })
+        }
+    }
+}

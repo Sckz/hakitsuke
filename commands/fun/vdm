@@ -1,0 +1,25 @@
+module.exports = {
+    name: "vdm",
+    category: "fun",
+    description: 'Anecdote du jour (VieDeMerde).',
+    run: async (client, message, args) => {
+        message.channel.send({embed: {
+            "thumbnail": {
+                "url": "https://image.noelshack.com/fichiers/2020/05/4/1580418124-vdm.jpg"
+            },
+            color: 761582,
+            author: {
+              name: client.user.username,
+              icon_url: client.user.avatarURL
+            },
+                title: "🔪 - VieDeMerde - 🔪",
+                description: "**__VDM du 16/02.__**\n*Aujourd'hui, après quelques mois de disette, rencard dans un restaurant avec le collègue d'une amie. À peine assise, il me sort : « Hum, tu sais ce que j'aimerais ? T'enculer à sec dans les toilettes. Partante ? ». Remarquez, c'est pratique, j'avais encore ma veste sur les épaules pour m'en aller directement. VDM*",
+            timestamp: new Date(),
+            footer: {
+              icon_url: client.user.avatarURL,
+              text: "Limen by Sckz"
+            }
+          }
+        });
+    }
+}
