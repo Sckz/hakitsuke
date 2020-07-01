@@ -1,0 +1,33 @@
+{
+  "name": "limen-3.0",
+  "version": "1.0.0",
+  "description": "vbs bot",
+  "main": "index.js",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "common-tags": "^1.8.0",
+    "discord.js": "^11.6.4",
+    "dotenv": "^8.2.0",
+    "fortnite": "^4.3.2",
+    "fs": "^0.0.1-security",
+    "funcraft": "^3.0.0",
+    "git": "^0.1.5",
+    "moment": "^2.24.0",
+    "ms": "^2.1.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "opusscript": "0.0.6",
+    "random-puppy": "^1.1.0",
+    "request": "^2.88.2",
+    "speedtest-net": "^2.1.1",
+    "yt-search": "^1.1.2",
+    "ytdl-core": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js"
+  },
+  "author": "sckz",
+  "license": "ISC"
+}
