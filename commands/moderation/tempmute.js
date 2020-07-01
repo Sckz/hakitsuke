@@ -37,8 +37,10 @@ module.exports = {
          .setDescription(membre + ` a été rendu muet temporairement pendant **`  + muteTime + '**')
          .addField(`📌 Modérateur: `, message.author.tag)
          .addField('📄 Raison :', `**__ ${tmReason}__**`)
-         .setFooter(`Log Modération || Limen by Sckz`)
+         .setFooter(`Log Modération`)
          .setTimestamp()
+        const channel = client.channels.find('name', "🚫・sanctions")
+        channel.send(embed)
         //
         let embedsend = new Discord.RichEmbed()
          .setColor('GREEN')
