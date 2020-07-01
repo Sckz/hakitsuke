@@ -28,7 +28,7 @@ config({
 //𝓋. 𝟏.𝟎 ◆ 🍀
 client.on('ready', () => {
     client.user.setStatus('available')
-    client.user.setActivity("Hakitsuke ✨" , {
+    client.user.setActivity("Hakitsuke ✨ - /help" , {
         type: "STREAMING",
         url: "https://www.twitch.tv/monstercat"
       });
@@ -111,6 +111,6 @@ client.on('message', message =>{
 client.on("message", async message => {
     if(message.author.bot) return;
     const channel = client.channels.find('name', "💬・messages")
-    channel.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author} ➜ ${message.content}`)
+    channel.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.tag} ➜ ${message.content}`)
 });
 client.login(process.env.TOKEN);
