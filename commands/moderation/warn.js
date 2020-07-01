@@ -33,7 +33,9 @@ module.exports = {
                  .setDescription(member + ` a été avertis ⚠️!`)
                  .addField(`📌 Modérateur: `, message.author.tag)
                  .addField('📄 Raison :', `__**${warnreason}**__`)
-                 .setFooter(`Log Modération || Limen `)
+                 .setFooter(`Log Modération`)
                  .setTimestamp()
+                const channel = client.channels.find('name', "🚫・sanctions")
+                channel.send(embed)
     }
 }
