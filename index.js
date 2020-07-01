@@ -28,9 +28,9 @@ config({
 //𝓋. 𝟏.𝟎 ◆ 🍀
 client.on('ready', () => {
     client.user.setStatus('available')
-    client.user.setActivity("𝓋. Bêta | !!help" , {
-        type: "WATCHING",
-        url: "https://www.twitch.tv/mushway/"
+    client.user.setActivity("Hakitsuke ✨" , {
+        type: "STREAMING",
+        url: "https://www.twitch.tv/monstercat"
       });
 });
 
@@ -81,110 +81,6 @@ client.on('guildMemberRemove', member => {
      .setFooter("Vibes by Sckz")
     console.log(`${member.guild.name} : [-1]`)
 });
-var banni = [
-    "nique",
-    "pute",
-    "tg",
-    "t g",
-    "ftg",
-    "baise",
-    "enculé",
-    "batard",
-    "hais",
-    "tapette",
-    "pédale",
-    "Hitler",
-    "Nigga",
-    "Nazi",
-    "Hitlerlesang",
-    "🖕",
-    "🖕🏻",
-    "🖕🏼",
-    "🖕🏽",
-    "🖕🏾",
-    "🖕🏿",
-    ":middle_finger_tone1:",
-    ":middle_finger_tone2:",
-    ":middle_finger_tone3:",
-    ":middle_finger_tone4:",
-    "fuck",
-    "pd",
-    "ntm",
-    "fdp"
-    //"ect.."
- ];
-client.on("message", (msg) => {
-    if (banni.some(x => msg.content.toLowerCase().split(/\s+/).includes(x))) {
-        let member = msg.author
-        msg.delete()
-         if (!warns[member.id]) {
-             warns[member.id] = []
-         }
-         warns[member.id].unshift({
-         reason: "Mot interdit",
-         date: Date.now(),
-         mod: msg.author.id
-         })
-        fs.writeFileSync('./warns.json', JSON.stringify(warns))
-        msg.channel.send(`> ${member} votre message a été supprimé pour : __**Vulgarité.**__`)
-         //embedmembersend
-         let embedsend = new Discord.RichEmbed()
-          .setColor('GREY')
-          .setTitle(`⚠️ WARNING ⚠️`)
-          .setThumbnail(member.displayAvatarURL)
-          .setDescription(`Vous avez été avertis ⚠️!`)
-          .addField(`📌 Modérateur: `, "Sanctionné automatiquement.")
-          .addField('📄 Raison :', `__**Mot interdit**__`)
-          .setFooter(`Limen by Sckz`)
-          .setTimestamp()
-         let embed = new Discord.RichEmbed()
-          .setColor('GREY')
-          .setTitle(`⚠️ WARNING ⚠️`)
-          .setThumbnail(member.displayAvatarURL)
-          .setDescription(member + ` a été avertis ⚠️!`)
-          .addField(`📌 Modérateur: `, "Sanctionné automatiquement.")
-          .addField('📄 Raison :', `__**Mot interdit**__`)
-          .setFooter(`Log Modération || Safety by Sckz`)
-          .setTimestamp()
-    }
-});
-client.on('message', message =>{
-    if (message.author.bot) return;
-
-    if(usersMap.has(message.author.id)) {
-        const userData = usersMap.get(message.author.id)
-        let msgCount = userData.msgCount;
-        var membre = message.guild.member(message.author);
-
-        if(parseInt(msgCount) === 5) {
-            const role = message.guild.roles.find(role => role.name === 'Muted')
-            membre.addRole(role);
-            setTimeout(function () {
-
-                membre.removeRole(role)
-    
-                message.channel.send(`> **${membre}** n'est plus muet :white_check_mark: !`)
-            }, ms("5m"));
-            message.channel.send(`> ${membre} a été rendu muet temporairement pour **__Spam__** pendant __5 minutes__. :white_check_mark:`)
-        } else {
-            msgCount++;
-            userData.msgCount = msgCount; 
-            usersMap.set(message.author.id, userData);
-        }
-    }
-    else {
-        usersMap.set(message.author.id, {
-            msgCount: 1,
-            lastMessage: message,
-            timer: null
-        })
-        setTimeout(() => {
-            usersMap.delete(message.author.id)
-        }, 5000);
-    }
-})
-
-
 client.on("message", async message => {
     console.log(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.username}: ${message.content}`)
 });
