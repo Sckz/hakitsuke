@@ -59,13 +59,6 @@ client.on('guildMemberAdd', member => {
     let cvibes = member.guild.channels.get('710134894231158891')
     let vibesftn = member.guild.channels.get('710076673818755103')
     let cvibesftn = member.guild.channels.get('710129814815768627')
-    let embed = new Discord.RichEmbed()
-     .setColor("GREEN")
-     .setThumbnail(member.user.displayAvatarURL)
-     .setDescription("𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐮𝐞 𝗮̀ " + member.user + " :tada::hugging:! 𝐓𝐮 𝐞𝐬 𝐚𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 𝐬𝐮𝐫 𝐥𝐞 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 **" + member.guild.name + "** ! 𝐍𝐨𝐮𝐬 𝐭𝐞 𝐬𝐨𝐮𝐡𝐚𝐢𝐭𝐨𝐧𝐬 𝐮𝐧 𝐛𝐨𝐧 𝐝𝐢𝐯𝐞𝐫𝐭𝐢𝐬𝐬𝐞𝐦𝐞𝐧𝐭 𝐬𝐮𝐫 𝐜𝐞 𝐬𝐞𝐫𝐯𝐞𝐮𝐫.")
-     .addField("__Nombre d'utilisateur de ce serveur :__", `**${member.guild.memberCount}**`)
-     .setFooter("Vibes by Sckz")
-    console.log(`${member.guild.name} : [+1]`)
 });
 //Leave
 client.on('guildMemberRemove', member => {
@@ -73,13 +66,6 @@ client.on('guildMemberRemove', member => {
     let cvibes = member.guild.channels.get('710134894231158891')
     let vibesftn = member.guild.channels.get('710076673818755103')
     let cvibesftn = member.guild.channels.get('710129814815768627')
-    let embed = new Discord.RichEmbed()
-     .setColor("RED")
-     .setThumbnail(member.user.displayAvatarURL)
-     .setDescription(member.user.tag + " 𝐞𝐬𝐭 𝐩𝐚𝐫𝐭𝐢(𝐞) 𝐝𝐮 𝐬𝐞𝐫𝐯𝐞𝐮𝐫 :no_entry: !")
-     .addField("__Nombre d'utilisateur de ce serveur :__", `**${member.guild.memberCount}**`)
-     .setFooter("Vibes by Sckz")
-    console.log(`${member.guild.name} : [-1]`)
 });
 client.on("message", async message => {
     console.log(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.username}: ${message.content}`)
