@@ -55,7 +55,7 @@ client.on("message", async message => {
 });
 //Join
 client.on('guildMemberAdd', member => {
-	let embed = new Discord.RichEmbed();
+	let embed = new Discord.RichEmbed()
 	 .setColor("WHITE")
 	 .setTitle("**JOIN** <:certif:724612832200753152>")
 	 .setDescription(`__Bienvenue à **${member.user}** qui a rejoint le discord.__\n\n__**Amuse-toi bien !**__`)
