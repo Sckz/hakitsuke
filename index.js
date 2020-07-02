@@ -89,7 +89,7 @@ client.on('message', message =>{
     }
 })
 client.on("message", async message => {
-    let membered = message.guild.member(message.author)
+    let membered = message.member
     let r0 = member.guild.roles.find(role => role.name === '🎮・Geek')
     let r1 = member.guild.roles.find(role => role.name === '✏️・Dessinateur')
     let r2 = member.guild.roles.find(role => role.name === '㊙️・Otaku')
