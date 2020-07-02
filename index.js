@@ -57,9 +57,9 @@ client.on("message", async message => {
 client.on('guildMemberAdd', member => {
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
-	 .setTitle("**JOIN** ✅")
+	 .setTitle("🟢 __**ARRIVE**__ 🟢")
 	 .setThumbnail(member.user.displayAvatarURL)
-	 .setDescription(`__Bienvenue à **${member.user}** qui a rejoint le discord.__\n\n__**Amuse-toi bien !**__\n\n*__Utilisateurs : ${member.guild.memberCount}__*`)
+	 .setDescription(`**Bienvenue à **${member.user}** qui a rejoint le discord.**\n__**Amuse-toi bien !**__\n\n*__Utilisateurs : ${member.guild.memberCount}__*`)
 	 .setImage("https://media.giphy.com/media/9CihaEMp5sORi/giphy.gif")
 
 	let sender = member.guild.channels.get("727635906239922316")
