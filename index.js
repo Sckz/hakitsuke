@@ -59,6 +59,9 @@ client.on('guildMemberAdd', member => {
 	 .setColor("WHITE")
 	 .setTitle("**JOIN** <:certif:724612832200753152>")
 	 .setDescription(`__Bienvenue à **${member.user}** qui a rejoint le discord.__\n\n__**Amuse-toi bien !**__`)
+
+	let sender = member.guild.channels.get("727635906239922316")
+	sender.send(embed)
 	 
 });
 //Leave
