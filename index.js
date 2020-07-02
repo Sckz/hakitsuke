@@ -28,7 +28,7 @@ config({
 //𝓋. 𝟏.𝟎 ◆ 🍀
 client.on('ready', () => {
     client.user.setStatus('available')
-    client.user.setActivity("Hakitsuke ✨ - /help" , {
+    client.user.setActivity("Hakitsuke ✨ | /help" , {
         type: "STREAMING",
         url: "https://www.twitch.tv/monstercat"
       });
@@ -55,7 +55,11 @@ client.on("message", async message => {
 });
 //Join
 client.on('guildMemberAdd', member => {
-
+	let embed = new Discord.RichEmbed();
+	 .setColor("WHITE")
+	 .setTitle("**JOIN** <:certif:724612832200753152>")
+	 .setDescription(`__Bienvenue à **${member.user}** qui a rejoint le discord.__\n\n__**Amuse-toi bien !**__`)
+	 
 });
 //Leave
 client.on('guildMemberRemove', member => {
