@@ -88,7 +88,7 @@ client.on('message', message =>{
         }, 5000);
     }
 })
-client.on("message", async message => {
+client.on('messageReactionAdd', async (reaction, user) => {
     let membered = message.member
     let r0 = member.guild.roles.find(role => role.name === '🎮・Geek')
     let r1 = member.guild.roles.find(role => role.name === '✏️・Dessinateur')
