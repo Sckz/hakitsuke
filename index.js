@@ -97,54 +97,6 @@ client.on('message', message =>{
         }, 5000);
     }
 })
-client.on('messageReactionAdd', async (reaction, user) => {
-    let membered = reaction.message.guild.member(user)
-    let r0 = member.guild.roles.find(role => role.name === '🎮・Geek')
-    let r1 = member.guild.roles.find(role => role.name === '✏️・Dessinateur')
-    let r2 = member.guild.roles.find(role => role.name === '㊙️・Otaku')
-    let r3 = member.guild.roles.find(role => role.name === '🎵・Musicien')
-    let r4 = member.guild.roles.find(role => role.name === '🚬・+18')
-    let r5 = member.guild.roles.find(role => role.name === '🔞・-18')
-    let r6 = member.guild.roles.find(role => role.name === "🌐・Notif' Partenariat")
-    let r7 = member.guild.roles.find(role => role.name === "🤡・Notif' Animation")
-    let r8 = member.guild.roles.find(role => role.name === "🎉・Notif' Giveaway")
-    let r9 = member.guild.roles.find(role => role.name === "🔕・No ping")
-    let r10 = member.guild.roles.find(role => role.name === "🔔・Ping")
-
-    if (reaction.emoji.name === '🎮') {
-			membered.addRole(r0)
-		} 
-    if (reaction.emoji.name === '✏️') {
-			membered.addRole(r1)
-		}
-    if (reaction.emoji.name === '㊙️') {
-			membered.addRole(r2)
-		}
-    if (reaction.emoji.name === '🎵') {
-			membered.addRole(r3)
-		}
-    if (reaction.emoji.name === '🚬') {
-			membered.addRole(r4)
-		}
-    if (reaction.emoji.name === '🔞') {
-			membered.addRole(r5)
-		}
-    if (reaction.emoji.name === '🌐') {
-			membered.addRole(r6)
-		}
-    if (reaction.emoji.name === '🤡') {
-			membered.addRole(r7)
-		}
-    if (reaction.emoji.name === '🎉') {
-			membered.addRole(r5)
-		}
-    if (reaction.emoji.name === '🔔') {
-			membered.addRole(r10)
-		}
-    if (reaction.emoji.name === '🔕') {
-			membered.addRole(r9)
-		}
-})
 client.on("message", async message => {
     if(message.author.bot) return;
     const channel = client.channels.find('name', "💬・messages")
