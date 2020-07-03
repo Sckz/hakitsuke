@@ -13,7 +13,9 @@ module.exports = {
         var winnerCount;
      
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("> Vous n'avez pas la permission").then(m => m.delete(5000));
-     
+        if (!args[0]) return message.channel.send("> Veuillez spécifier le nombre de gagnant(s).")
+        if (!args[1]) return message.channel.send("> Veuillez spécifier le temps que va durer le concours.")
+        if (!args[2]) return message.channel.send("> Veuillez spécifier le lot a gagner.")
      
         winnerCount = args[0];
         time = args[1];
