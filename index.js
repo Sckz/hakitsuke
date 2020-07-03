@@ -64,6 +64,7 @@ client.on('guildMemberAdd', member => {
 
 	let sender = member.guild.channels.get("727635906239922316")
 	sender.send(embed)
+	
 	let r1 = member.guild.roles.get(r => r.id === '728313582156120217')
 	let r2 = member.guild.roles.get(r => r.id === '727658923670241320')
     	let r3 = member.guild.roles.get(r => r.id === '727659003236057139')
@@ -83,7 +84,6 @@ client.on('guildMemberAdd', member => {
 	member.addRole(r7)
 	member.addRole(r8)
 	member.addRole(r9)
-	member.addRole(r10)
 	 
 });
 //Leave
