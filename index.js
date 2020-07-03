@@ -64,6 +64,26 @@ client.on('guildMemberAdd', member => {
 
 	let sender = member.guild.channels.get("727635906239922316")
 	sender.send(embed)
+	let r1 = member.guild.roles.get(r => r.id === '728313582156120217')
+	let r2 = member.guild.roles.get(r => r.id === '727658923670241320')
+    	let r3 = member.guild.roles.get(r => r.id === '727659003236057139')
+    	let r4 = member.guild.roles.get(r => r.id === '727658935473012787')
+	let r5 = member.guild.roles.get(r => r.id === '727658750516658206')
+	let r6 = member.guild.roles.get(r => r.id === '727658736612671499')
+	let r7 = member.guild.roles.get(r => r.id === '727658722910011434')
+	let r8 = member.guild.roles.get(r => r.id === '727658659773153341')
+	let r9 = member.guild.roles.get(r => r.id === '727658644065353730')
+	let r10 = member.guild.roles.get(r => r.id === '727658760784314419')
+    	member.addRole(r1)
+    	member.addRole(r2)
+    	member.addRole(r3)
+	member.addRole(r4)
+	member.addRole(r5)
+	member.addRole(r6)
+	member.addRole(r7)
+	member.addRole(r8)
+	member.addRole(r9)
+	member.addRole(r10)
 	 
 });
 //Leave
