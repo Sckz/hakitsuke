@@ -84,10 +84,15 @@ client.on('guildMemberAdd', member => {
 	member.addRole(r7)
 	member.addRole(r8)
 	member.addRole(r9)
+	
+	let sender = client.channels.find('name', "💬・messages")
+	sender.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user} [+]`)
 	 
 });
 //Leave
 client.on('guildMemberRemove', member => {
+	let sender = client.channels.find('name', "💬・messages")
+	sender.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user.username} [-]`)
 });
 client.on('message', message =>{
     if (message.author.bot) return;
