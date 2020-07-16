@@ -159,7 +159,15 @@ let embed = new Discord.RichEmbed()
             .setTimestamp()
   } else if(newUserChannel === undefined){
 
-    // User leaves a voice channel
+    let embed = new Discord.RichEmbed()
+            .setColor('RED')
+            .setTitle(`❌ ◆ JOIN CHANNEL`)
+            .setAuthor(client.user.username, client.user.displayAvatarURL)
+            .setThumbnail(newUserChannel.user.displayAvatarURL)
+            .setDescription(newUserChannel.user + ` a rejoint un salon vocal !`)
+            .addField('📄 Channel :', `${message.member.voiceChannel.name}`)
+            .setFooter(`Log Modération`)
+            .setTimestamp()
 
   }
 })
