@@ -29,5 +29,15 @@ module.exports = {
          .setTimestamp()
         const channel = client.channels.find('name', "🚫・sanctions")
         channel.send(embed)
+//
+let sanction = new Discord.RichEmbed()
+            .setColor('DARK_RED')
+            .setTitle(`⛔ ◆ BANISSEMENT`)
+            .setAuthor(client.user.username, client.user.displayAvatarURL)
+            .setThumbnail(member.user.displayAvatarURL)
+            .setDescription(`**Vous avez été bannis du serveur !**`)
+            .setFooter(`Hakitsuke 🥀`)
+            .setTimestamp()
+member.send(sanction)
     }
 }
