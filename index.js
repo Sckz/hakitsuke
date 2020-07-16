@@ -57,7 +57,7 @@ client.on("message", async message => {
 client.on('guildMemberAdd', member => {
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
-	 .setTitle("🥀 ▌__**NOUVEL ARRIVANT**__")
+	 .setTitle("🛬 ▌__**NOUVEL ARRIVANT !**__")
 	 .setThumbnail(member.user.displayAvatarURL)
 	 .setDescription(`**Bienvenue à **${member.user}** qui a rejoint le discord 💎.**\n__**Amuse-toi bien ! 💘**__`)
 	 .setImage("https://media.giphy.com/media/9CihaEMp5sORi/giphy.gif")
