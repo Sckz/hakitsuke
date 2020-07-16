@@ -16,5 +16,16 @@ module.exports = {
         warns[member.id].shift()
         fs.writeFileSync('./warns.json', JSON.stringify(warns))
         message.channel.send("> Le dernier avertissement de " + member + " a été retiré :white_check_mark:")
+        let embed = new Discord.RichEmbed()
+                 .setColor('GREY')
+                 .setTitle(`⚠️ UNWARN ⚠️`)
+                 .setAuthor(client.user.tag, client.user.displayAvatarURL)
+                 .setThumbnail(member.user.displayAvatarURL)
+                 .setDescription(`Le dernier avertissement de ${member} a été retiré ⚠️!`)
+                 .addField(`📌 Modérateur: `, message.author)
+                 .setFooter(`Log Modération`)
+                 .setTimestamp()
+                const channel = client.channels.find('name', "🚫・sanctions")
+                channel.send(embed)
     }
 }
