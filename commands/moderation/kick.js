@@ -17,7 +17,6 @@ module.exports = {
         if (!member.kickable) return message.channel.send("> Je ne peux pas kick cet utilisateur").then(m => m.delete(5000));
         member.kick()
         message.channel.send("> **" + member.user.username + '** a été kick pour __**' + kickReason + '**__ :white_check_mark:')
-        member.send(`👢 Vous avez été kick pour __**${kickReason}**__ 👢`)
         let embed = new Discord.RichEmbed()
          .setColor('RED')
          .setTitle(`👢 KICK 👢`)
