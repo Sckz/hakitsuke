@@ -57,10 +57,11 @@ client.on("message", async message => {
 client.on('guildMemberAdd', member => {
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
-	 .setTitle("🥀 ▌__**ARRIVANT**__")
+	 .setTitle("🥀 ▌__**NOUVEL ARRIVANT**__")
 	 .setThumbnail(member.user.displayAvatarURL)
-	 .setDescription(`**Bienvenue à **${member.user}** qui a rejoint le discord.**\n__**Amuse-toi bien !**__\n\n*__Utilisateurs : ${member.guild.memberCount}__*`)
+	 .setDescription(`**Bienvenue à **${member.user}** qui a rejoint le discord 💎.**\n__**Amuse-toi bien ! 💘**__`)
 	 .setImage("https://media.giphy.com/media/9CihaEMp5sORi/giphy.gif")
+         .setFooter(`Hakitsuke 🥀 | Utilisateurs : ${member.guild.memberCount}`)
 
 	let sender = member.guild.channels.get("727635906239922316")
 	sender.send(embed)
