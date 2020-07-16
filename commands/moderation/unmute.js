@@ -15,5 +15,16 @@ module.exports = {
         let muterole = message.guild.roles.find(role => role.name === 'Muted')
         if(muterole && member.roles.has(muterole.id)) member.removeRole(muterole)
         message.channel.send("> " + member + `n'est plus muet :white_check_mark: `)
+        let embed = new Discord.RichEmbed()
+             .setColor('AQUA')
+             .setTitle(`🔕 UNMUTE 🔕`)
+             .setAuthor(client.user, client.user.displayAvatarURL)
+             .setThumbnail(member.user.displayAvatarURL)
+             .setDescription(member.user + ` n'est plus muet 🔕!`)
+             .addField(`📌 Modérateur: `, message.author)
+             .setFooter(`Log Modération`)
+             .setTimestamp()
+            const channel = client.channels.find('name', "🚫・sanctions")
+            channel.send(embed) 
     }
 }
