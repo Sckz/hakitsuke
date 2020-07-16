@@ -108,7 +108,7 @@ client.on('message', message =>{
             message.channel.send(`> ${membre} vos messages ont été supprimés pour **__Spam__**. :white_check_mark:`)
            let embed = new Discord.RichEmbed()
             .setColor('GREEN')
-            .setTitle(`🔕 TEMPMUTE 🔕`)
+            .setTitle(`🔕 ◆ TEMPMUTE`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(message.author.displayAvatarURL)
             .setDescription(membre + ` a été rendu muet temporairement pendant **5 minutes**`)
@@ -140,4 +140,27 @@ client.on("message", async message => {
     const channel = client.channels.find('name', "💬・messages")
     channel.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.tag} ➜ ${message.content}`)
 });
+
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+  let newUserChannel = newMember.voiceChannel
+  let oldUserChannel = oldMember.voiceChannel
+
+
+  if(oldUserChannel === undefined && newUserChannel !== undefined) {
+       
+let embed = new Discord.RichEmbed()
+            .setColor('GREEN')
+            .setTitle(`☑️ ◆ JOIN CHANNEL`)
+            .setAuthor(client.user.username, client.user.displayAvatarURL)
+            .setThumbnail(newUserChannel.user.displayAvatarURL)
+            .setDescription(newUserChannel.user + ` a rejoint un salon vocal !`)
+            .addField('📄 Channel :', `${message.member.voiceChannel.name}`)
+            .setFooter(`Log Modération`)
+            .setTimestamp()
+  } else if(newUserChannel === undefined){
+
+    // User leaves a voice channel
+
+  }
+})
 client.login(process.env.TOKEN);
