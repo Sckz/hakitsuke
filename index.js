@@ -106,6 +106,18 @@ client.on('message', message =>{
          if(parseInt(msgCount) === 5) {
             message.channel.bulkDelete(parseInt(5))
             message.channel.send(`> ${membre} vos messages ont été supprimés pour **__Spam__**. :white_check_mark:`)
+           let embed = new Discord.RichEmbed()
+            .setColor('GREEN')
+            .setTitle(`🔕 TEMPMUTE 🔕`)
+            .setAuthor(client.user.username, client.user.displayAvatarURL)
+            .setThumbnail(message.author.displayAvatarURL)
+            .setDescription(membre + ` a été rendu muet temporairement pendant **5 minutes**`)
+            .addField(`📌 Modérateur: `, "**Automatique**")
+            .addField('📄 Raison :', `**__Spam__**`)
+            .setFooter(`Log Modération`)
+            .setTimestamp()
+        const channel = client.channels.find('name', "🚫・sanctions")
+        channel.send(embed)
         } else {
             msgCount++;
             userData.msgCount = msgCount; 
