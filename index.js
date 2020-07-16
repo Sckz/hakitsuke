@@ -28,7 +28,7 @@ config({
 //𝓋. 𝟏.𝟎 ◆ 🍀
 client.on('ready', () => {
     client.user.setStatus('available')
-    client.user.setActivity("Hakitsuke ✨ | /help" , {
+    client.user.setActivity("use /help | by Sckz 🥀" , {
         type: "STREAMING",
         url: "https://www.twitch.tv/monstercat"
       });
