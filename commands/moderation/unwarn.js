@@ -19,7 +19,7 @@ module.exports = {
         let embed = new Discord.RichEmbed()
                  .setColor('GREY')
                  .setTitle(`⚠️ UNWARN ⚠️`)
-                 .setAuthor(client.user.tag, client.user.displayAvatarURL)
+                 .setAuthor(client.user, client.user.displayAvatarURL)
                  .setThumbnail(member.user.displayAvatarURL)
                  .setDescription(`Le dernier avertissement de ${member} a été retiré ⚠️!`)
                  .addField(`📌 Modérateur: `, message.author)
