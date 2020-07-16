@@ -18,7 +18,6 @@ module.exports = {
         if (muterole) {
             member.addRole(muterole)
             message.channel.send("> " + member + ' a été rendu muet pour __**' + muteReason + '**__ :white_check_mark:')
-            member.send(`🔕 Vous avez été rendu muet pour __**${muteReason}**__ 🔕`)
             let embed = new Discord.RichEmbed()
              .setColor('AQUA')
              .setTitle(`🔕 MUTE 🔕`)
@@ -31,6 +30,18 @@ module.exports = {
              .setTimestamp()
             const channel = client.channels.find('name', "🚫・sanctions")
             channel.send(embed)
+//
+let sanction = new Discord.RichEmbed()
+            .setColor('DARK_RED')
+            .setTitle(`🔕 ◆ MUET`)
+            .setAuthor(client.user.username, client.user.displayAvatarURL)
+            .setThumbnail(member.user.displayAvatarURL)
+            .setDescription(`**Vous avez été rendu muet !**\n\n`)
+            .addField(`📌 Modérateur: `, message.author.tag)
+            .addField('📄 Raison :', muteReason)
+            .setFooter(`Hakitsuke 🥀`)
+            .setTimestamp()
+member.send(sanction)
         }
         else {
             message.guild.createRole({name: 'Muted', permissions: 0}).then((role) => {
