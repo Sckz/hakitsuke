@@ -8,6 +8,7 @@ module.exports = {
     description: "Voir les avertissements d'un utilisateur.",
     usage: "<user>",
     run: async (client, message, args) => {
+        message.channel.bulkDelete(parseInt(1))
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("> Vous n'avez pas la permission d'utiliser cette commande")
         let member = message.mentions.members.first()
         if (!member) return message.channel.send("> Veuillez mentionner un membre")
