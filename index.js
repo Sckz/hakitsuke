@@ -57,7 +57,7 @@ client.on("message", async message => {
 client.on('guildMemberAdd', member => {
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
-	 .setTitle("🟢 ▌__**ARRIVANT**__")
+	 .setTitle("🥀 ▌__**ARRIVANT**__")
 	 .setThumbnail(member.user.displayAvatarURL)
 	 .setDescription(`**Bienvenue à **${member.user}** qui a rejoint le discord.**\n__**Amuse-toi bien !**__\n\n*__Utilisateurs : ${member.guild.memberCount}__*`)
 	 .setImage("https://media.giphy.com/media/9CihaEMp5sORi/giphy.gif")
@@ -85,14 +85,14 @@ client.on('guildMemberAdd', member => {
 	member.addRole(r8)
 	member.addRole(r9)
 	
-	let sender1 = client.channels.find('name', "💬・messages")
-	sender1.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user} [+]`)
+	let sender1 = client.channels.find('name', "🛫・arrivés")
+	sender1.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user} *"a rejoint le serveur. [+] - ☑️**`)
 	 
 });
 //Leave
 client.on('guildMemberRemove', member => {
-	let sender2 = client.channels.find('name', "💬・messages")
-	sender2.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user.username} [-]`)
+	let sender2 = client.channels.find('name', "🛫・arrivés")
+	sender2.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user.username} **a quitté le serveur. [-] - ⛔**`)
 });
 client.on('message', message =>{
     if (message.author.bot) return;
