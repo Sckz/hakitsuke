@@ -161,7 +161,7 @@ let embed = new Discord.RichEmbed()
 
     let embed = new Discord.RichEmbed()
             .setColor('RED')
-            .setTitle(`❌ ◆ JOIN CHANNEL`)
+            .setTitle(`❌ ◆ LEAVE CHANNEL`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(newUserChannel.user.displayAvatarURL)
             .setDescription(newUserChannel.user + ` a rejoint un salon vocal !`)
