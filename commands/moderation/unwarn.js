@@ -28,6 +28,15 @@ module.exports = {
                 const channel = client.channels.find('name', "🚫・sanctions")
                 channel.send(embed)
 //
-
+let sanction = new Discord.RichEmbed()
+            .setColor('GREEN')
+            .setTitle(`⚠️ ◆ AVERTISSEMENT RETIRÉ`)
+            .setAuthor(client.user.username, client.user.displayAvatarURL)
+            .setThumbnail(member.user.displayAvatarURL)
+            .setDescription(`**Votre dernier avertissement a été retiré !**\n\n`)
+            .addField(`📌 Modérateur: `, message.author.tag)
+            .setFooter(`Hakitsuke 🥀`)
+            .setTimestamp()
+member.send(sanction)
     }
 }
