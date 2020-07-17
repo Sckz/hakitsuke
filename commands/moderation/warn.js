@@ -26,7 +26,6 @@ module.exports = {
                 })
                 fs.writeFileSync('./warns.json', JSON.stringify(warns))
                 message.channel.send("> " + member + " a été avertis pour __**" + warnreason + "**__ :white_check_mark:")
-                member.send(`Vous avez été avertis pour __**${warnreason}**__`)
                 let embed = new Discord.RichEmbed()
                  .setColor('GREY')
                  .setTitle(`⚠️ WARNING ⚠️`)
@@ -39,5 +38,17 @@ module.exports = {
                  .setTimestamp()
                 const channel = client.channels.find('name', "🚫・sanctions")
                 channel.send(embed)
+//
+let sanction = new Discord.RichEmbed()
+            .setColor('DARK_RED')
+            .setTitle(`⚠️ ◆ AVERTISSEMENT`)
+            .setAuthor(client.user.username, client.user.displayAvatarURL)
+            .setThumbnail(member.user.displayAvatarURL)
+            .setDescription(`**Vous avez été averti !**\n\n`)
+            .addField(`📌 Modérateur: `, message.author.tag)
+            .addField('📄 Raison :', `__**${warnreason}**__`)
+            .setFooter(`Hakitsuke 🥀`)
+            .setTimestamp()
+member.send(sanction)
     }
 }
