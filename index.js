@@ -105,10 +105,18 @@ client.on('message', message =>{
 
          if(parseInt(msgCount) === 5) {
             message.channel.bulkDelete(parseInt(5))
-            message.channel.send(`> ${membre} vos messages ont été supprimés pour **__Spam__**. :white_check_mark:`)
+        const role = msg.guild.roles.find(role => role.name === 'Muted')
+            membre.addRole(role);
+        msg.channel.send(`> ${membre} a été temporairement rendu muet pour __**Spam**__ pendant **5 minutes** ! ☑️`)
+            setTimeout(function () {
+
+                membre.removeRole(role)
+    
+                msg.channel.send(`> **${membre}** n'est plus muet :white_check_mark: !`)
+            }, ms("5m"));
            let embed = new Discord.RichEmbed()
             .setColor('GREEN')
-            .setTitle(`🔕 ◆ TEMPMUTE`)
+            .setTitle(`🔕 ◆ MUTE TEMPORAIRE`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(message.author.displayAvatarURL)
             .setDescription(membre + ` a été rendu muet temporairement pendant **5 minutes**`)
