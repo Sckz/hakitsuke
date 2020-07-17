@@ -22,7 +22,6 @@ module.exports = {
         if(!muteTime) return message.channel.send("> Désolé, vous devez définir un temps.").then(m => m.delete(5000));
         membre.addRole(muteRole.id);
         message.channel.send(`> **${membre}** a été rendu muet pendant **${muteTime}** pour **__${tmReason}__** :white_check_mark:`)
-        membre.send(`> 🔕 Vous avez été rendu muet pendant **${muteTime}** pour __**${tmReason}**__ 🔕`)
         //log
         setTimeout(function () {
 
@@ -32,8 +31,8 @@ module.exports = {
         }, ms(muteTime));
         let embed = new Discord.RichEmbed()
          .setColor('GREEN')
-         .setTitle(`🔕 TEMPMUTE 🔕`)
-         .setAuthor(client.user.tag, client.user.displayAvatarURL)
+         .setTitle(`🔕 ◆ MUTE TEMPORAIRE`)
+         .setAuthor(client.user.username, client.user.displayAvatarURL)
          .setThumbnail(membre.user.displayAvatarURL)
          .setDescription(membre + ` a été rendu muet temporairement pendant **`  + muteTime + '**')
          .addField(`📌 Modérateur: `, message.author.tag)
@@ -45,7 +44,7 @@ module.exports = {
         //
         let embedsend = new Discord.RichEmbed()
          .setColor('GREEN')
-         .setTitle(`🔕 TEMPMUTE 🔕`)
+         .setTitle(`🔕 ◆ MUTE TEMPORAIRE`)
          .setAuthor(client.user.username, client.user.displayAvatarURL)
          .setThumbnail(membre.displayAvatarURL)
          .setDescription(`Vous avez été rendu muet temporairement pendant **`  + muteTime + '**')
