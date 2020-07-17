@@ -41,13 +41,13 @@ module.exports = {
         //
         let embedsend = new Discord.RichEmbed()
          .setColor('DARK_RED')
-         .setTitle(`🔨 TEMPBAN 🔨`)
-         .setAuthor(client.user.tag, client.user.displayAvatarURL)
+         .setTitle(`⛔ BANNISSEMENT TEMPORAIRE`)
+         .setAuthor(client.user.username, client.user.displayAvatarURL)
          .setThumbnail(member.user.displayAvatarURL)
          .setDescription(` Vous avez été rendu muet temporairement pendant **`  + tempBanTime + '**')
          .addField(`📌 Modérateur: `, message.author.tag)
          .addField('📄 Raison :', `**__ ${reason}__*`)
-         .setFooter(`Limen by Sckz`)
+         .setFooter(`Hakitsuke 🥀`)
          .setTimestamp()
         member.send(embedsend)
     }
