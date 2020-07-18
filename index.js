@@ -28,7 +28,7 @@ config({
 //𝓋. 𝟏.𝟎 ◆ 🍀
 client.on('ready', () => {
     client.user.setStatus('available')
-    client.user.setActivity("use /help | by Sckz 🥀" , {
+    client.user.setActivity("Protect 🛡️ • /help", {
         type: "STREAMING",
         url: "https://www.twitch.tv/monstercat"
       });
@@ -76,11 +76,12 @@ let phrase = [
     let r3 = member.guild.roles.find(role => role.name === '▬▬▬▬ ↑ Sexe ↑ ▬▬▬▬')
     let r4 = member.guild.roles.find(role => role.name === '▬▬▬ ↑ Grades ↑ ▬▬▬')
         let r5 = member.guild.roles.find(role => role.name === '▬▬▬ ↑ Amour ↑ ▬▬▬')
-	let r6 = member.guild.roles.find(role => role.name === '▬▬▬ ↑ Activités ↑ ▬▬▬')
+    let r6 = member.guild.roles.find(role => role.name === '▬▬▬ ↑ Activités ↑ ▬▬▬')
 	let r7 = member.guild.roles.find(role => role.name === '▬▬▬▬ ↑ Âge ↑ ▬▬▬▬')
     let r8 = member.guild.roles.find(role => role.name === '▬▬▬ ↑ Notifications ↑ ▬▬▬')
     let r9 = member.guild.roles.find(role => role.name === '▬▬▬▬ ↑ Ping ↑ ▬▬▬▬')
     let r10 = member.guild.roles.find(role => role.name === '▬▬▬ ↑ Orientation Sexuelle ↑ ▬▬▬')
+let r11 = member.guild.roles.find(role => role.name === '▬▬▬ ↑ Protection ↑ ▬▬▬')
     	member.addRole(r1)
     	member.addRole(r2)
     	member.addRole(r3)
@@ -90,6 +91,8 @@ let phrase = [
 	member.addRole(r7)
 	member.addRole(r8)
 	member.addRole(r9)
+member.addRole(r10)
+membre.addRole(r11)
 	
 	let sender1 = client.channels.find('name', "🛫・arrivés")
 	sender1.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user} *"a rejoint le serveur. [+] - ☑️**`)
@@ -174,7 +177,7 @@ let embed = new Discord.RichEmbed()
 
     let embed = new Discord.RichEmbed()
             .setColor('RED')
-            .setTitle(`❌ ◆ LEAVE CHANNEL`)
+            .setTitle(`⛔ ◆ LEAVE CHANNEL`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(newUserChannel.user.displayAvatarURL)
             .setDescription(newUserChannel.user + ` a rejoint un salon vocal !`)
