@@ -60,13 +60,11 @@ let phrase = [
 `**Oh! Un __**${member.user}**__ est apparu ! Vite il faut le capturer !**`,
 `**OMG! Il y a le fameux __**${member.user}**__ qui est la ! ✨**`
 ]
-
-random = Math.floor(Math.random() * phrase);
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
 	 .setTitle("🛬 ▌__**NOUVEL ARRIVANT !**__")
 	 .setThumbnail(member.user.displayAvatarURL)
-	 .setDescription(`${random}\n__**Amuse-toi bien ! 💘**__`)
+	 .setDescription(`${phrase[Math.floor(Math.random() * phrase.length)]}\n__**Amuse-toi bien ! 💘**__`)
 	 .setImage("https://media.giphy.com/media/9CihaEMp5sORi/giphy.gif")
          .setFooter(`Hakitsuke 🥀 | Utilisateurs : ${member.guild.memberCount}`)
 
