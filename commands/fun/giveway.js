@@ -1,5 +1,7 @@
 const Discord = require("discord.js")
 const ms = require('ms')
+const moments = require('moments')
+//var returned_endate = moment(startdate).add(2, 'hours')
 
 module.exports = {
     name: "giveaway",
@@ -8,6 +10,15 @@ module.exports = {
     description: 'Créer un tirage au sort.',
     usage: "<gagnants> <temps(s/m/h)> <lot>",
     run: async (client, message, args) => {
+     var giveawayEmbed = new Discord.RichEmbed()
+         .setTitle(`**${item}**`)
+         .setColor(16639033)
+         .setDescription(`*Veuillez réagir avec 🎉 pour participer.*\n__**Fin dans:**__ ${time}\n__**Hôte**__ : ${message.author.username}`)
+         .setAuthor("🎉 GIVEAWAY 🎉", client.user.displayAvatarURL)
+         .setFooter("Smoked", client.user.displayAvatarURL)
+         .setTimestamp("")
+        
+        var embedSend = await message.channel.send(giveawayEmbed);
         var item = "";
         var time;
         var winnerCount;
@@ -26,15 +37,6 @@ module.exports = {
         var date = new Date().getTime();
         var dateTime = new Date(date + (time * 1000));
 
-        var giveawayEmbed = new Discord.RichEmbed()
-         .setTitle(`**${item}**`)
-         .setColor(16639033)
-         .setDescription(`*Veuillez réagir avec 🎉 pour participer.*\n__**Fin dans:**__ ${time}\n__**Hôte**__ : ${message.author.username}`)
-         .setAuthor("🎉GIVEAWAY 🎉", client.user.displayAvatarURL)
-         .setFooter("Hakitsuke ✨", client.user.displayAvatarURL)
-         .setTimestamp("")
-        
-        var embedSend = await message.channel.send(giveawayEmbed);
         embedSend.react("🎉");
      
         setTimeout(function () {
@@ -82,8 +84,16 @@ module.exports = {
             }
      
             for (var i = 0; i < winners.length; i++) {
-                message.channel.send(`> Félicitation à ${winners[i]} . Tu as gagné : **${item}**.`);
-            }
+               var embedwin = new Discord.RichEmbed()
+                .setTitle(`**${item}**`)
+                .setColor(16639033)
+                .setDescription(`**__Gagnant:__** ${winners[i]}\n\n__**Durée:**__ Terminé.\n__**Hôte:**__ ${message.author.username}`)
+                .setAuthor("🎉 GIVEAWAY 🎉", client.user.displayAvatarURL)
+                .setFooter("Smoked | Fin dans ${}", client.user.displayAvatarURL)
+                .setTimestamp("")
+                message.channel.send(`> Félicitation à ${winners[i]}. Tu as gagné : **${item}**.`)
+                giveawayEmbed.edit(embedwin)
+                    }
      
         }, ms(time));
     }
