@@ -164,24 +164,25 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
        
-let embed = new Discord.RichEmbed()
-            .setColor('GREEN')
-            .setTitle(`☑️ ◆ JOIN CHANNEL`)
-            .setAuthor(client.user.username, client.user.displayAvatarURL)
-	    .setDescription(newUserChannel.user + ` a rejoint un salon vocal !`)
-            .addField('📄 Channel :', `${message.member.voiceChannel.name}`)
-            .setFooter(`Log Modération`)
-            .setTimestamp()
+//let embed = new Discord.RichEmbed()
+          //  .setColor('GREEN')
+          //  .setTitle(`☑️ ◆ JOIN CHANNEL`)
+           // .setAuthor(client.user.username, client.user.displayAvatarURL)
+	   // .setDescription(newUserChannel.user + ` a rejoint un salon vocal !`)
+          //  .addField('📄 Channel :', `${message.member.voiceChannel.name}`)
+           // .setFooter(`Log Modération`)
+            //.setTimestamp()
+	  
   } else if(newUserChannel === undefined){
 
-    let embed = new Discord.RichEmbed()
-            .setColor('RED')
-            .setTitle(`⛔ ◆ LEAVE CHANNEL`)
-            .setAuthor(client.user.username, client.user.displayAvatarURL)
-            .setDescription(newUserChannel.user + ` a rejoint un salon vocal !`)
-            .addField('📄 Channel :', `${message.member.voiceChannel.name}`)
-            .setFooter(`Log Modération`)
-            .setTimestamp()
+   // let embed = new Discord.RichEmbed()
+        //    .setColor('RED')
+           // .setTitle(`⛔ ◆ LEAVE CHANNEL`)
+          //  .setAuthor(client.user.username, client.user.displayAvatarURL)
+           // .setDescription(newUserChannel.user + ` a rejoint un salon vocal !`)
+           // .addField('📄 Channel :', `${oldMember.voiceChannel.name}`)
+          //  .setFooter(`Log Modération`)
+           // .setTimestamp()
 
   }
 })
