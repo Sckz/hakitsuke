@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const ms = require('ms')
-const moments = require('moments')
+const moment = require("moment")
 //var returned_endate = moment(startdate).add(2, 'hours')
 
 module.exports = {
