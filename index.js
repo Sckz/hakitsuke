@@ -56,16 +56,16 @@ client.on("message", async message => {
 //Join
 client.on('guildMemberAdd', member => {
 let phrase = [
-`**Bienvenue à __**${member.user}**__ qui a rejoint le discord 💎.**`,
-`**Oh! Un __**${member.user}**__ est apparu ! Vite il faut le capturer !**`,
-`**OMG! Il y a le fameux __**${member.user}**__ qui est la ! ✨**`
+`**Bienvenue à ${member.user} qui a rejoint le discord 💎.**`,
+`**Oh! Un ${member.user} est apparu ! Vite il faut le capturer !**`,
+`**OMG! Il y a le fameux ${member.user}** qui est la ! ✨**`
 ]
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
 	 .setTitle("🛬・__**NOUVEL ARRIVANT !**__")
 	 .setThumbnail(member.user.displayAvatarURL)
 	 .setDescription(`${phrase[Math.floor(Math.random() * phrase.length)]}\n__**Amuse-toi bien ! 💘**__`)
-	 .setImage("")
+	 .setImage("https://media.discordapp.net/attachments/615679279220523160/736957237884485702/1595424114075.jpg")
          .setFooter(`Smoked | Utilisateurs : ${member.guild.memberCount}`)
 
 	let sender = member.guild.channels.get("727635906239922316")
@@ -95,13 +95,13 @@ member.addRole(r10)
 member.addRole(r11)
 	
 	let sender1 = client.channels.find('name', "🛫・arrivés")
-	sender1.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user} *"a rejoint le serveur. [+] - ☑️**`)
+	sender1.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user} **a rejoint le serveur. ☑️**`)
 	 
 });
 //Leave
 client.on('guildMemberRemove', member => {
 	let sender2 = client.channels.find('name', "🛫・arrivés")
-	sender2.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | ${member.user.username} **a quitté le serveur. [-] - ⛔**`)
+	sender2.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) | **__${member.user.username}__ a quitté le serveur. ⛔**`)
 });
 client.on('message', message =>{
     if (message.author.bot) return;
