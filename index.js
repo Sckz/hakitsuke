@@ -58,7 +58,7 @@ client.on('guildMemberAdd', member => {
 let phrase = [
 `**Bienvenue à ${member.user} qui a rejoint le discord 💎.**`,
 `**Oh! Un ${member.user} est apparu ! Vite il faut le capturer !**`,
-`**OMG! Il y a le fameux ${member.user}** qui est la ! ✨**`
+`**OMG! Il y a le fameux ${member.user} qui est la ! ✨**`
 ]
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
