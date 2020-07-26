@@ -28,14 +28,14 @@ module.exports = {
             channel.send(embed)
 //
 //
-let sanction = new Discord.RichEmbed()
+ let sanction = new Discord.RichEmbed()
             .setColor('GREEN')
-            .setTitle(`🔇 ◆ NON-MUET`)
+            .setTitle(`✅ ◆ Sanction`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(member.user.displayAvatarURL)
-            .setDescription(`**Vous n'êtes plus muet !**\n\n`)
-            .addField(`📌 Modérateur: `, message.author.tag)
-            .setFooter(`Hakitsuke 🥀`)
+            .setDescription(`**Votre sanction a été levée de force !**/n/n`)
+            .addField(`📌 Type: `, `**__Réduction au silence__**`)
+            .setFooter(`Smoked" 🚬`)
             .setTimestamp()
 member.send(sanction)
     }
