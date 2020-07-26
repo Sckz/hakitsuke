@@ -57,7 +57,7 @@ client.on("message", async message => {
 client.on('guildMemberAdd', member => {
 let phrase = [
 `**Bienvenue à ${member.user} qui a rejoint le discord 💎.**`,
-`**Oh! Un ${member.user} est apparu ! Vite il faut le capturer !**`,
+`**Oh! Un ${member.user} est apparu ! Vite il faut le capturer ! <:pokeball:737021679657681029>**`,
 `**OMG! Il y a le fameux ${member.user} qui est la ! ✨**`
 ]
 	let embed = new Discord.RichEmbed()
