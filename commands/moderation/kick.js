@@ -29,16 +29,16 @@ module.exports = {
          .setTimestamp()
         const channel = client.channels.find('name', "🚫・sanctions")
         channel.send(embed)
-//
+        //
 let sanction = new Discord.RichEmbed()
-            .setColor('DARK_RED')
-            .setTitle(`👢 ◆ EXPULSION`)
+            .setColor('RED')
+            .setTitle(`⛔ ◆ Sanction`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(member.user.displayAvatarURL)
-            .setDescription(`**Vous avez été expulsé du serveur !**\n\n`)
-            .addField(`📌 Modérateur: `, message.author.tag)
-            .addField('📄 Raison :', `__**${kickReason}**__`)
-            .setFooter(`Smoked"`)
+            .setDescription(`**Vous avez été sanctionné !**/n/n`)
+            .addField(`📌 Type: `, `**__Explusion__**`)
+            .addField('📄 Raison :', `**${kickReason}**`)
+            .setFooter(`Smoked" 🚬`)
             .setTimestamp()
 member.send(sanction)
     }
