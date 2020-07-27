@@ -64,14 +64,14 @@ const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 		.setFooter("by SCKZ.")
 		
 		let sender = msg.guild.channels.get("727931482127204522")
-		sender.send(m1)
+		//sender.send(m1)
 		//
 		let m0 = new Discord.RichEmbed()
 		.setTitle("**▬ 📜 Reglement 📜 ▬**")
 		.setDescription(`<:SMdot:737340714500751400> **Pas d'harcèlement envers d'autres joueurs.** Racisme, sexisme, xénophobie, transphobie, homophobie, misogynie, etc. n'est autorisé.\n <:SMdot:737340714500751400> **Gardez toute discussion civile** et dans les bons canaux. Nous pouvons vous demander de déplacer votre conversation.\n <:SMdot:737340714500751400> **Pas de langage inapproprié.** Restez respectueux envers autrui.\n <:SMdot:737340714500751400> **Pas de spam ou d'inondation des salons avec des messages.** Il est également interdit d'encourager les autres à envoyer du spam.\n <:SMdot:737340714500751400> **Aucun nom d'utilisateur**, statut ou photo de profil inapproprié ou offensant n'est permis. Il peut vous être demandé de les modifier.\n <:SMdot:737340714500751400> **Pas de politique.** Il n'est pas permis de parler de problèmes graves impliquant des représentants du gouvernement, des partis politiques, des religions ou des désaccords géopolitiques. Même si ces sujets sont abordés de manière civile, ce n'est pas le bon espace pour ces conversations.\n <:SMdot:737340714500751400> **Pas d'autopromotion**, de sollicitation ou de publicité dans les salles de discussion ou générales. Cela inclut également les DM d'un utilisateur.\n <:SMdot:737340714500751400> **Les modérateurs ont le dernier mot.** Écoutez et respectez les bénévoles qui font fonctionner ce serveur.\n <:SMdot:737340714500751400> **Respectez les conditions d'utilisation et les directives de Discord.**\n<:SMFleche:737340683618222210> https://discord.com/terms \n <:SMFleche:737340683618222210> https://discord.com/guidelines`)
 		.setFooter(`${msg.guild.name}`)
 let sender2 = msg.guild.channels.get("727897833688268990")
-sender2.send(m0)
+//sender2.send(m0)
 		//
 		let m2 = new Discord.RichEmbed()
 		.setTitle("**▬ 🌙 Présentation 🌙 ▬**")
@@ -84,7 +84,7 @@ sender2.send(m0)
 		.setDescription(`__**Tu veux nous soutenir et avoir le rôle <@&728554632120369172> ?**__\n\n**Tu as juste à mettre le lien du discord en statut et le tour est joué :SM6385_christmaspartyparrot: **\n**Lien du discord  : https://discord.gg/rV5R2Ge **\n**_PS: pour le recevoir il te suffit de contacter un <@&727635160375492628> _**`)
 		.setFooter(`${msg.guild.name}`)
 		let sender3 = msg.guild.channels.get("735947525634261053")
-		sender3.send(m3)
+		//sender3.send(m3)
 		//
 		let m4 = new Discord.RichEmbed()
 		.setTitle("**▬ 🦑 Grades 🦑 ▬**")
@@ -92,14 +92,14 @@ sender2.send(m0)
 		.setFooter(`${msg.guild.name}`)
 		.setImage("https://cdn.discordapp.com/attachments/697812739359244308/736949465428131910/giphy.gif")
 		let sender4 = msg.guild.channels.get("728354770678710414")
-		sender4.send(m4)
+		//sender4.send(m4)
 		//
 		let m5 = new Discord.RichEmbed()
-		.setTitle("**▬ 🦑 Grades 🦑 ▬**")
-		.setDescription(``)
+		.setDescription(`**Heyy !!** <:SMRainbow_heart:728668608712147013> \n\n**Merci pour ton boost BG/BLG** <:SMnitro:728668780414107789> \n**Pour activer ton grade personnalisé il te suffit de ping un créateur et d'attendre ça réponse !** <:yellowverif:718819562560159754> \n\n*__(le spam de ping est INTERDIT ,vous risquez d'etre sanctionné si c'est le cas)__* ⚠️\n <@&727959571737608252>`)
 		.setFooter(`${msg.guild.name}`)
 		.setImage("https://cdn.discordapp.com/attachments/697812739359244308/736949465428131910/giphy.gif")
-		
+		let sender5 = msg.guild.channels.get("728354770678710414")
+		sender5.send(m5)
 		
 	}
 })
