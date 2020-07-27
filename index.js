@@ -93,6 +93,12 @@ sender2.send(`▬▬▬ **{ REGLES }** ▬▬▬\n\n <:dot:724287473856938054> *
 		let sender4 = msg.guild.channels.get("")
 		sender4.send("@here")
 		sender4.send(m4)
+		//
+		let m5 = new Discord.RichEmbed()
+		.setTitle("**▬ 🦑 Grades 🦑 ▬**")
+		.setDescription(``)
+		.setFooter(`${msg.guild.name}`)
+		.setImage("https://cdn.discordapp.com/attachments/697812739359244308/736949465428131910/giphy.gif")
 		
 		
 	}
