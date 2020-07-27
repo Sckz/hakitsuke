@@ -21,7 +21,11 @@ module.exports = {
         var muteTime = args[1]; 
         if(!muteTime) return message.channel.send("> Désolé, vous devez définir un temps.").then(m => m.delete(5000));
         membre.addRole(muteRole.id);
-        message.channel.send(`> **${membre}** a été rendu muet pendant **${muteTime}** pour **__${tmReason}__** :white_check_mark:`)
+         let send2 = new Discord.RichEmbed()
+            .setAuthor(`${membre.user.username}`)
+            .setDescription(`**${membre}** a été reduit au silence pendant _**${muteTime}s**_. Raison: **__${tmReason}__**`)
+            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+            message.channel.send(send2)
         //log
         setTimeout(function () {
 
