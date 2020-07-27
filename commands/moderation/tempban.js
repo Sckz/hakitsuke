@@ -17,10 +17,18 @@ module.exports = {
             var tempBanTime = args[1];
         if (ms(tempBanTime)) {
             message.guild.member(user).ban(reason);
-            message.channel.send(`> ${member} a été bannis temporairement pendant __**${tempBanTime}**__ pour **__Raison non défini__** ! :white_check_mark:`)
+            let send2 = new Discord.RichEmbed()
+            .setAuthor(`${member.user.username}`)
+            .setDescription(`**${member.user.username}** a été bannis pendant _**${tempBanTime}**_. Raison: **__Raison non défini__**.`)
+            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+            message.channel.send(send2)
             setTimeout(function () {
                 message.guild.unban(user.id);
-                message.channel.send(`${member} n'est plus bannis.`);
+            let send = new Discord.RichEmbed()
+            .setAuthor(`${member.user.username}`)
+            .setDescription(`**${member.user.username}** n'est plus bannis !`)
+            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+            message.channel.send(send)
             }, ms(tempBanTime));
         }else {
             return message.channel.send("> Spécifiez une heure valide.");
@@ -50,14 +58,22 @@ module.exports = {
             .setTimestamp()
         member.send(sanction)
         };
+  
         var tempBanTime = args[1];
         if (ms(tempBanTime)) {
             message.guild.member(user).ban(reason);
-            message.channel.send(`> ${member} a été bannis temporairement pendant __**${tempBanTime}**__ pour **__${reason}__** ! :white_check_mark:`)
-            member.send(`🔨 Vous avez été bannis pendant **${tempBanTime}** pour __**${reason}**__ 🔨`)
+             let send2 = new Discord.RichEmbed()
+            .setAuthor(`${member.user.username}`)
+            .setDescription(`**${member.user.username}** a été bannis pendant _**${tempBanTime}**_. Raison: **__${reason}__**.`)
+            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+            message.channel.send(send2)
             setTimeout(function () {
+                let send = new Discord.RichEmbed()
+            .setAuthor(`${member.user.username}`)
+            .setDescription(`**${member.user.username}** n'est plus bannis !`)
+            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+            message.channel.send(send)
                 message.guild.unban(user.id);
-                message.channel.send(`${member} n'est plus bannis.`);
             }, ms(tempBanTime));
         }else {
             return message.channel.send("> Spécifiez une heure valide.");
