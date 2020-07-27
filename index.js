@@ -64,7 +64,6 @@ const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 		.setFooter("by SCKZ.")
 		
 		let sender = msg.guild.channels.get("727931482127204522")
-		sender.send("@here")
 		sender.send(m1)
 		//
 		let m0 = new Discord.RichEmbed()
@@ -72,7 +71,6 @@ const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 		.setDescription(`<:dot:724287473856938054> **Pas d'harcèlement envers d'autres joueurs.** Racisme, sexisme, xénophobie, transphobie, homophobie, misogynie, etc. n'est autorisé.\n <:dot:724287473856938054> **Gardez toute discussion civile** et dans les bons canaux. Nous pouvons vous demander de déplacer votre conversation.\n <:dot:724287473856938054> **Pas de langage inapproprié.** Restez respectueux envers autrui.\n <:dot:724287473856938054> **Pas de spam ou d'inondation des salons avec des messages.** Il est également interdit d'encourager les autres à envoyer du spam.\n <:dot:724287473856938054> **Aucun nom d'utilisateur**, statut ou photo de profil inapproprié ou offensant n'est permis. Il peut vous être demandé de les modifier.\n <:dot:724287473856938054> **Pas de politique.** Il n'est pas permis de parler de problèmes graves impliquant des représentants du gouvernement, des partis politiques, des religions ou des désaccords géopolitiques. Même si ces sujets sont abordés de manière civile, ce n'est pas le bon espace pour ces conversations.\n <:dot:724287473856938054> **Pas d'autopromotion**, de sollicitation ou de publicité dans les salles de discussion ou générales. Cela inclut également les DM d'un utilisateur.\n <:dot:724287473856938054> **Les modérateurs ont le dernier mot.** Écoutez et respectez les bénévoles qui font fonctionner ce serveur.\n<:dot:724287473856938054> **Respectez les conditions d'utilisation et les directives de Discord.**\n<:flche:675081122106834991> https://discord.com/terms \n <:flche:675081122106834991> https://discord.com/guidelines`)
 		.setFooter("by SCKZ.")
 let sender2 = msg.guild.channels.get("727897833688268990")
-sender2.send(`@here`)
 sender2.send(m0)
 		//
 		let m2 = new Discord.RichEmbed()
@@ -86,7 +84,6 @@ sender2.send(m0)
 		.setDescription(`__**Tu veux nous soutenir et avoir le rôle <@&728554632120369172> ?**__\n\n**Tu as juste à mettre le lien du discord en statut et le tour est joué :SM6385_christmaspartyparrot: **\n**Lien du discord  : https://discord.gg/rV5R2Ge **\n**_PS: pour le recevoir il te suffit de contacter un <@&727635160375492628> _**`)
 		.setFooter(`${msg.guild.name}`)
 		let sender3 = msg.guild.channels.get("735947525634261053")
-		sender3.send("@here")
 		sender3.send(m3)
 		//
 		let m4 = new Discord.RichEmbed()
@@ -95,7 +92,6 @@ sender2.send(m0)
 		.setFooter(`${msg.guild.name}`)
 		.setImage("https://cdn.discordapp.com/attachments/697812739359244308/736949465428131910/giphy.gif")
 		let sender4 = msg.guild.channels.get("728354770678710414")
-		sender4.send("@here")
 		sender4.send(m4)
 		//
 		let m5 = new Discord.RichEmbed()
@@ -169,14 +165,14 @@ client.on('message', message =>{
 
          if(parseInt(msgCount) === 5) {
             message.channel.bulkDelete(parseInt(5))
-        const role = msg.guild.roles.find(role => role.name === 'Muted')
+        const role = message.guild.roles.find(role => role.name === 'Muted')
             membre.addRole(role);
-        msg.channel.send(`> ${membre} a été temporairement rendu muet pour __**Spam**__ pendant **5m** ! ☑️`)
+        message.channel.send(`> ${membre} a été temporairement rendu muet pour __**Spam**__ pendant **5m** ! ☑️`)
             setTimeout(function () {
 
                 membre.removeRole(role)
     
-                msg.channel.send(`> **${membre}** n'est plus muet :white_check_mark: !`)
+                message.channel.send(`> **${membre}** n'est plus muet :white_check_mark: !`)
             }, ms("5m"));
            let embed = new Discord.RichEmbed()
             .setColor('GREEN')
