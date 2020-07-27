@@ -25,7 +25,11 @@ module.exports = {
                     mod: message.author.id
                 })
                 fs.writeFileSync('./warns.json', JSON.stringify(warns))
-                message.channel.send("> " + member + " a été avertit pour __**" + warnreason + "**__ :white_check_mark:")
+                    let send = new Discord.RichEmbed()
+                    .setAuthor(`${member.user.username}`)
+                    .setDescription(`**${member}** a été avertis. Raison: **__${warnreason}__**`)
+                    .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+                   message.channel.send(send)
                 let embed = new Discord.RichEmbed()
                  .setColor('GREY')
                  .setTitle(`⚠️ ◆ AVERTISSEMENT`)
