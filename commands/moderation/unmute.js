@@ -20,7 +20,6 @@ module.exports = {
             .setDescription(`**${member}** votre sanction a été levée de force: Vous n'etes plus réduit au silence.`)
             .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
             message.channel.send(send)
-        message.channel.send("> " + member + `n'est plus muet :white_check_mark: `)
         let embed = new Discord.RichEmbed()
              .setColor('AQUA')
              .setTitle(`🔇 ◆ NON-MUET`)
