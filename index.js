@@ -58,13 +58,15 @@ client.on('guildMemberAdd', member => {
 let phrase = [
 `**Bienvenue à ${member.user} qui a rejoint le discord 💎.**`,
 `**Oh! Un ${member.user} est apparu ! Vite il faut le capturer ! <:pokeball:737021679657681029>**`,
-`**OMG! Il y a le fameux ${member.user} qui est la ! ✨**`
+`**OMG! Il y a le fameux ${member.user} qui est la ! ✨**`,
+`**${member.user} a rejoint la partie** `,
+`**${member.user} est bien arrivé(e) a destination.`
 ]
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
 	 .setTitle("🛬・__**NOUVEL ARRIVANT !**__")
 	 .setThumbnail(member.user.displayAvatarURL)
-	 .setDescription(`${phrase[Math.floor(Math.random() * phrase.length)]}\n__**Amuse-toi bien ! 💘**__`)
+	 .setDescription(`${phrase[Math.floor(Math.random() * phrase.length)]}\n\n__**Amuse-toi bien ! 💘**__`)
 	 .setImage("https://media.discordapp.net/attachments/615679279220523160/736957237884485702/1595424114075.jpg")
          .setFooter(`Smoked | Utilisateurs : ${member.guild.memberCount}`)
 
@@ -134,6 +136,18 @@ client.on('message', message =>{
             .setTimestamp()
         const channel = client.channels.find('name', "🚫・sanctions")
         channel.send(embed)
+		 //
+	let sanction = new Discord.RichEmbed()
+            .setColor('RED')
+            .setTitle(`⛔ ◆ Sanction`)
+            .setAuthor(client.user.username, client.user.displayAvatarURL)
+            .setThumbnail(membre.user.displayAvatarURL)
+            .setDescription(`**Vous avez été sanctionné !**/n/n*Durée:* __**5m**__`)
+            .addField(`📌 Type: `, `**__Réduction au silence__**`)
+            .addField('📄 Raison :', `**__Spam (Automatique)__**`)
+            .setFooter(`Smoked" 🚬`)
+            .setTimestamp()
+        membre.send(sanction)
         } else {
             msgCount++;
             userData.msgCount = msgCount; 
