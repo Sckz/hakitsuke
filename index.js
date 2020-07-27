@@ -116,7 +116,7 @@ let phrase = [
 	 .setColor(16250871)
 	 .setTitle("🛬・__**NOUVEL ARRIVANT !**__")
 	 .setThumbnail(member.user.displayAvatarURL)
-	 .setDescription(`${phrase[Math.random(Math.random() * phrase.length)]}\n\n__**Amuse-toi bien ! 💘**__`)
+	 .setDescription(`${phrase[Math.floor(Math.random() * phrase.length)]}\n\n__**Amuse-toi bien ! 💘**__`)
 	 .setImage("https://cdn.discordapp.com/attachments/615679279220523160/737321556430159922/srdte-erfe_5.gif")
          .setFooter(`Smoked | Utilisateurs : ${member.guild.memberCount}`)
 
