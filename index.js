@@ -95,7 +95,7 @@ let sender2 = msg.guild.channels.get("727897833688268990")
 		//sender4.send(m4)
 		//
 		let m5 = new Discord.RichEmbed()
-		.setDescription(`**Heyy !!** <:SMRainbow_heart:728668608712147013> \n\n**Merci pour ton boost BG/BLG** <:SMnitro:728668780414107789> \n**Pour activer ton grade personnalisé il te suffit de ping un créateur et d'attendre ça réponse !** <:yellowverif:718819562560159754> \n\n*__(le spam de ping est INTERDIT ,vous risquez d'etre sanctionné si c'est le cas)__* ⚠️\n <@&727959571737608252>`)
+		.setDescription(`**Heyy !!** ❤️ \n\n**Merci pour ton boost BG/BLG** 👑 \n**Pour activer ton grade personnalisé il te suffit de ping un créateur et d'attendre ça réponse !** \n\n*__(le spam de ping est INTERDIT ,vous risquez d'etre sanctionné si c'est le cas)__* ⚠️\n <@&727959571737608252>`)
 		.setFooter(`${msg.guild.name}`)
 		let sender5 = msg.guild.channels.get("736663000454266940")
 		sender5.send(m5)
