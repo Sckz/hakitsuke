@@ -55,7 +55,7 @@ client.on("message", async message => {
 });
 //cmd
 client.on('message', msg => {
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 	if (args[0] === "sendm") {
 		let m1 = new Discord.RichEmbed()
 		.setTitle("**▬ 🪐 Vérification 🪐 ▬**")
