@@ -15,7 +15,11 @@ module.exports = {
         if(!warns[member.id] || !warns[member.id].length) return message.channel.send("> Ce membre n'a actuellement aucun warn.").then(m => m.delete(5000));
         warns[member.id].shift()
         fs.writeFileSync('./warns.json', JSON.stringify(warns))
-        message.channel.send("> Le dernier avertissement de " + member + " a été retiré :white_check_mark:")
+            let send = new Discord.RichEmbed()
+            .setAuthor(`${member.user.username}`)
+            .setDescription(`**${member}** votre dernier avertissement a été retiré.`)
+            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+            message.channel.send(send)
         let embed = new Discord.RichEmbed()
                  .setColor('GREY')
                  .setTitle(`⚠️ ◆ AVERTISSEMENT RETIRÉ`)
