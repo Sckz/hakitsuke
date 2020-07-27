@@ -67,9 +67,13 @@ const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 		sender.send("@here")
 		sender.send(m1)
 		//
+		let m0 = new Discord.RichEmbed()
+		.setTitle("▬▬▬ **{ REGLES }** ▬▬▬**")
+		.setDescription(`<:dot:724287473856938054> **Pas d'harcèlement envers d'autres joueurs.** Racisme, sexisme, xénophobie, transphobie, homophobie, misogynie, etc. n'est autorisé.\n <:dot:724287473856938054> **Gardez toute discussion civile** et dans les bons canaux. Nous pouvons vous demander de déplacer votre conversation.\n <:dot:724287473856938054> **Pas de langage inapproprié.** Restez respectueux envers autrui.\n <:dot:724287473856938054> **Pas de spam ou d'inondation des salons avec des messages.** Il est également interdit d'encourager les autres à envoyer du spam.\n <:dot:724287473856938054> **Aucun nom d'utilisateur**, statut ou photo de profil inapproprié ou offensant n'est permis. Il peut vous être demandé de les modifier.\n <:dot:724287473856938054> **Pas de politique.** Il n'est pas permis de parler de problèmes graves impliquant des représentants du gouvernement, des partis politiques, des religions ou des désaccords géopolitiques. Même si ces sujets sont abordés de manière civile, ce n'est pas le bon espace pour ces conversations.\n <:dot:724287473856938054> **Pas d'autopromotion**, de sollicitation ou de publicité dans les salles de discussion ou générales. Cela inclut également les DM d'un utilisateur.\n <:dot:724287473856938054> **Les modérateurs ont le dernier mot.** Écoutez et respectez les bénévoles qui font fonctionner ce serveur.\n<:dot:724287473856938054> **Respectez les conditions d'utilisation et les directives de Discord.**\n<:flche:675081122106834991> https://discord.com/terms \n <:flche:675081122106834991> https://discord.com/guidelines`)
+		.setFooter("by SCKZ.")
 let sender2 = msg.guild.channels.get("727897833688268990")
 sender2.send(`@here`)
-sender2.send(`▬▬▬ **{ REGLES }** ▬▬▬\n\n <:dot:724287473856938054> **Pas d'harcèlement envers d'autres joueurs.** Racisme, sexisme, xénophobie, transphobie, homophobie, misogynie, etc. n'est autorisé.\n <:dot:724287473856938054> **Gardez toute discussion civile** et dans les bons canaux. Nous pouvons vous demander de déplacer votre conversation.\n <:dot:724287473856938054> **Pas de langage inapproprié.** Restez respectueux envers autrui.\n <:dot:724287473856938054> **Pas de spam ou d'inondation des salons avec des messages.** Il est également interdit d'encourager les autres à envoyer du spam.\n <:dot:724287473856938054> **Aucun nom d'utilisateur**, statut ou photo de profil inapproprié ou offensant n'est permis. Il peut vous être demandé de les modifier.\n <:dot:724287473856938054> **Pas de politique.** Il n'est pas permis de parler de problèmes graves impliquant des représentants du gouvernement, des partis politiques, des religions ou des désaccords géopolitiques. Même si ces sujets sont abordés de manière civile, ce n'est pas le bon espace pour ces conversations.\n <:dot:724287473856938054> **Pas d'autopromotion**, de sollicitation ou de publicité dans les salles de discussion ou générales. Cela inclut également les DM d'un utilisateur.\n <:dot:724287473856938054> **Les modérateurs ont le dernier mot.** Écoutez et respectez les bénévoles qui font fonctionner ce serveur.\n<:dot:724287473856938054> **Respectez les conditions d'utilisation et les directives de Discord.**\n<:flche:675081122106834991> https://discord.com/terms \n<:flche:675081122106834991> https://discord.com/guidelines`)
+sender2.send(m.)
 		//
 		let m2 = new Discord.RichEmbed()
 		.setTitle("**▬ 🌙 Présentation 🌙 ▬**")
@@ -79,7 +83,7 @@ sender2.send(`▬▬▬ **{ REGLES }** ▬▬▬\n\n <:dot:724287473856938054> *
 		//
 		let m3 = new Discord.RichEmbed()
 		.setTitle("**▬ 🌈 Aide-nous ! 🌈 ▬**")
-		.setDescription(`__**Tu veux nous soutenir et avoir le rôle <@&728554632120369172> ?**__\n**Tu as juste à mettre le lien du discord en statut et le tour est joué :SM6385_christmaspartyparrot: **\n**Lien du discord  : https://discord.gg/rV5R2Ge **\n**_PS: pour le recevoir il te suffit de contacter un <@&727635160375492628> _**`)
+		.setDescription(`__**Tu veux nous soutenir et avoir le rôle <@&728554632120369172> ?**__\n\n**Tu as juste à mettre le lien du discord en statut et le tour est joué :SM6385_christmaspartyparrot: **\n**Lien du discord  : https://discord.gg/rV5R2Ge **\n**_PS: pour le recevoir il te suffit de contacter un <@&727635160375492628> _**`)
 		.setFooter(`${msg.guild.name}`)
 		let sender3 = msg.guild.channels.get("735947525634261053")
 		sender3.send("@here")
