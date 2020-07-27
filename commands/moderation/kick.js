@@ -16,7 +16,11 @@ module.exports = {
         if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send("> Vous ne pouvez pas ban cet utilisateur !").then(m => m.delete(5000));
         if (!member.kickable) return message.channel.send("> Je ne peux pas kick cet utilisateur").then(m => m.delete(5000));
         member.kick()
-        message.channel.send("> **" + member.user.username + '** a été kick pour __**' + kickReason + '**__ :white_check_mark:')
+         let send = new Discord.RichEmbed()
+        .setAuthor(`${member.user.username}`)
+        .setDescription(`**${member.user.username}** a été expulsé. Raison: **__${kickReason}__**.`)
+        .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+        message.channel.send(send)
         let embed = new Discord.RichEmbed()
          .setColor('RED')
          .setTitle(`👢 KICK 👢`)
