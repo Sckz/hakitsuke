@@ -73,7 +73,7 @@ const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 		.setFooter("by SCKZ.")
 let sender2 = msg.guild.channels.get("727897833688268990")
 sender2.send(`@here`)
-sender2.send(m.)
+sender2.send(m0)
 		//
 		let m2 = new Discord.RichEmbed()
 		.setTitle("**▬ 🌙 Présentation 🌙 ▬**")
