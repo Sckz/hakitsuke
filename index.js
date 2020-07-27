@@ -53,21 +53,65 @@ client.on("message", async message => {
         command.run(client, message, args);
 
 });
+//cmd
+client.on('message', msg => {
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+	if (args[0] === "sendm") {
+		let m1 = new Discord.RichEmbed()
+		.setTitle("**▬ 🪐 Vérification 🪐 ▬**")
+		.setDescription(`__Bienvenue sur **${msg.guild.name}**__\n\n**Pour avoir accès a ce serveur, Veuillez réagir a ce message. ✅**\n\n*__Attention__* ⚠️: : \n*Ce serveur n'insiste en aucun cas a la consommation de tabac ou autres produits pouvant mener a une addiction.*`)
+		.setImage("https://cdn.discordapp.com/attachments/728659758793621566/735439027133743144/tenor_2_1.gif")
+		.setFooter("by SCKZ.")
+		
+		let sender = msg.guild.channels.get("727931482127204522")
+		sender.send("@here")
+		sender.send(m1)
+		//
+let sender2 = msg.guild.channels.get("727897833688268990")
+sender2.send(`@here`)
+sender2.send(`▬▬▬ **{ REGLES }** ▬▬▬\n\n <:dot:724287473856938054> **Pas d'harcèlement envers d'autres joueurs.** Racisme, sexisme, xénophobie, transphobie, homophobie, misogynie, etc. n'est autorisé.\n <:dot:724287473856938054> **Gardez toute discussion civile** et dans les bons canaux. Nous pouvons vous demander de déplacer votre conversation.\n <:dot:724287473856938054> **Pas de langage inapproprié.** Restez respectueux envers autrui.\n <:dot:724287473856938054> **Pas de spam ou d'inondation des salons avec des messages.** Il est également interdit d'encourager les autres à envoyer du spam.\n <:dot:724287473856938054> **Aucun nom d'utilisateur**, statut ou photo de profil inapproprié ou offensant n'est permis. Il peut vous être demandé de les modifier.\n <:dot:724287473856938054> **Pas de politique.** Il n'est pas permis de parler de problèmes graves impliquant des représentants du gouvernement, des partis politiques, des religions ou des désaccords géopolitiques. Même si ces sujets sont abordés de manière civile, ce n'est pas le bon espace pour ces conversations.\n <:dot:724287473856938054> **Pas d'autopromotion**, de sollicitation ou de publicité dans les salles de discussion ou générales. Cela inclut également les DM d'un utilisateur.\n <:dot:724287473856938054> **Les modérateurs ont le dernier mot.** Écoutez et respectez les bénévoles qui font fonctionner ce serveur.\n<:dot:724287473856938054> **Respectez les conditions d'utilisation et les directives de Discord.**\n<:flche:675081122106834991> https://discord.com/terms \n<:flche:675081122106834991> https://discord.com/guidelines`)
+		//
+		let m2 = new Discord.RichEmbed()
+		.setTitle("**▬ 🌙 Présentation 🌙 ▬**")
+		.setDescription("")
+		.setImage("https://cdn.discordapp.com/attachments/728659758793621566/735439027133743144/tenor_2_1.gif")
+		.setFooter(`${msg.guild.name}`)
+		//
+		let m3 = new Discord.RichEmbed()
+		.setTitle("**▬ 🌈 Aide-nous ! 🌈 ▬**")
+		.setDescription(`__**Tu veux nous soutenir et avoir le rôle <@&728554632120369172> ?**__\n**Tu as juste à mettre le lien du discord en statut et le tour est joué :SM6385_christmaspartyparrot: **\n**Lien du discord  : https://discord.gg/rV5R2Ge **\n**_PS: pour le recevoir il te suffit de contacter un <@&727635160375492628> _**`)
+		.setFooter(`${msg.guild.name}`)
+		let sender3 = msg.guild.channels.get("735947525634261053")
+		sender3.send("@here")
+		sender3.send(m3)
+		//
+		let m4 = new Discord.RichEmbed()
+		.setTitle("**▬ 🦑 Grades 🦑 ▬**")
+		.setDescription(`𝟱 ➠ <@&727878363464859750> \n𝟭𝟬 ➠ <@&727879022599733338> \n𝟭𝟱 ➠ <@&727659531022237786> \n𝟮𝟬 ➠ <@&727896528076668948> \n𝟮𝟱 ➠ <@&727901183209111582> \n𝟯𝟬 ➠ <@&727901433466191942> \n𝟯𝟱 ➠ <@&727901885364830218> \n𝟰𝟬 ➠ <@&727902523104690267> \n𝟰𝟱 ➠ <@&727905648137994270> \n𝟱𝟬 ➠  <@&727906598370148402> \n𝟱𝟱 ➠ <@&727907532089065543> \n𝟲𝟬 ➠ <@&727908327442481183>`)
+		.setFooter(`${msg.guild.name}`)
+		.setImage("https://cdn.discordapp.com/attachments/697812739359244308/736949465428131910/giphy.gif")
+		let sender4 = msg.guild.channels.get("")
+		sender4.send("@here")
+		sender4.send(m4)
+		
+		
+	}
+})
 //Join
 client.on('guildMemberAdd', member => {
 let phrase = [
 `**Bienvenue à ${member.user} qui a rejoint le discord 💎.**`,
 `**Oh! Un ${member.user} est apparu ! Vite il faut le capturer ! <:pokeball:737021679657681029>**`,
 `**OMG! Il y a le fameux ${member.user} qui est la ! ✨**`,
-`**${member.user} a rejoint la partie** `,
-`**${member.user} est bien arrivé(e) a destination.`
+`**${member.user} a rejoint la partie !** ☑️`,
+`**${member.user} est bien arrivé(e) a destination. 🚀`
 ]
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
 	 .setTitle("🛬・__**NOUVEL ARRIVANT !**__")
 	 .setThumbnail(member.user.displayAvatarURL)
-	 .setDescription(`${phrase[Math.floor(Math.random() * phrase.length)]}\n\n__**Amuse-toi bien ! 💘**__`)
-	 .setImage("https://media.discordapp.net/attachments/615679279220523160/736957237884485702/1595424114075.jpg")
+	 .setDescription(`${phrase[Math.random(Math.random() * phrase.length)]}\n\n__**Amuse-toi bien ! 💘**__`)
+	 .setImage("https://cdn.discordapp.com/attachments/615679279220523160/737321556430159922/srdte-erfe_5.gif")
          .setFooter(`Smoked | Utilisateurs : ${member.guild.memberCount}`)
 
 	let sender = member.guild.channels.get("727635906239922316")
