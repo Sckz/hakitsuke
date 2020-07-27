@@ -6,6 +6,7 @@ module.exports = {
     description: "Définir un slowmode",
     usage: "<valeur>",
     run: async (client, message, args) => {
+        var membre = message.guild.member(message.author)
         message.channel.bulkDelete(parseInt(1))
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("> Vous n'avez pas la permission !").then(m => m.delete(5000));
         let duration = args[0]
@@ -14,6 +15,10 @@ module.exports = {
          .catch(() => {
         message.channel.send("> Une erreur est survenu, veuillez vérifié votre temps du slowmode.").then(m => m.delete(5000));
          })
-        message.channel.send("> Vous avez définis le slowmode pendant **" + duration + "** seconds!")
+        let send2 = new Discord.RichEmbed()
+            .setAuthor(`${membre.user.username}`)
+            .setDescription(`**${membre}** a ralenti les messages par un délai de _**${duration}s**_.`)
+            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
+            message.channel.send(send2)
     }
 }
