@@ -166,12 +166,18 @@ client.on('message', message =>{
             message.channel.bulkDelete(parseInt(5))
         const role = message.guild.roles.find(role => role.name === 'Muted')
             membre.addRole(role);
-        message.channel.send(`> ${membre} a été temporairement rendu muet pour __**Spam**__ pendant **5m** ! ☑️`)
+	let send2 = new Discord.RichEmbed()
+            .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
+            .setDescription(`**${membre}** a été reduit au silence pendant _**5m**_. Raison: **__Spam__**`)
+         message.channel.send(send2)
             setTimeout(function () {
 
                 membre.removeRole(role)
     
-                message.channel.send(`> **${membre}** n'est plus muet :white_check_mark: !`)
+	let send = new Discord.RichEmbed()
+            .setAuthor("Sanction terminée", 'https://emoji.gg/assets/emoji/2990_yes.png')
+            .setDescription(`**${membre}** n'est plus muet !`)
+            message.channel.send(send)
             }, ms("5m"));
            let embed = new Discord.RichEmbed()
             .setColor('GREEN')
