@@ -17,9 +17,8 @@ module.exports = {
         if (!member.kickable) return message.channel.send("> Je ne peux pas kick cet utilisateur").then(m => m.delete(5000));
         member.kick()
          let send = new Discord.RichEmbed()
-        .setAuthor(`${member.user.username}`)
+        .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
         .setDescription(`**${member.user.username}** a été expulsé. Raison: **__${kickReason}__**.`)
-        .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
         message.channel.send(send)
         let embed = new Discord.RichEmbed()
          .setColor('RED')
