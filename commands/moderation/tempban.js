@@ -18,16 +18,14 @@ module.exports = {
         if (ms(tempBanTime)) {
             message.guild.member(user).ban(reason);
             let send2 = new Discord.RichEmbed()
-            .setAuthor(`${member.user.username}`)
+            .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
             .setDescription(`**${member.user.username}** a été bannis pendant _**${tempBanTime}**_. Raison: **__Raison non défini__**.`)
-            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
             message.channel.send(send2)
             setTimeout(function () {
                 message.guild.unban(user.id);
             let send = new Discord.RichEmbed()
-            .setAuthor(`${member.user.username}`)
+            .setAuthor("Sanction terminée", 'https://emoji.gg/assets/emoji/2990_yes.png')
             .setDescription(`**${member.user.username}** n'est plus bannis !`)
-            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
             message.channel.send(send)
             }, ms(tempBanTime));
         }else {
@@ -63,15 +61,13 @@ module.exports = {
         if (ms(tempBanTime)) {
             message.guild.member(user).ban(reason);
              let send2 = new Discord.RichEmbed()
-            .setAuthor(`${member.user.username}`)
+            .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
             .setDescription(`**${member.user.username}** a été bannis pendant _**${tempBanTime}**_. Raison: **__${reason}__**.`)
-            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
             message.channel.send(send2)
             setTimeout(function () {
                 let send = new Discord.RichEmbed()
-            .setAuthor(`${member.user.username}`)
+            .setAuthor("Sanction terminée", 'https://emoji.gg/assets/emoji/2990_yes.png')
             .setDescription(`**${member.user.username}** n'est plus bannis !`)
-            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
             message.channel.send(send)
                 message.guild.unban(user.id);
             }, ms(tempBanTime));
