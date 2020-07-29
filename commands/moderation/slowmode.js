@@ -16,9 +16,8 @@ module.exports = {
         message.channel.send("> Une erreur est survenu, veuillez vérifié votre temps du slowmode.").then(m => m.delete(5000));
          })
         let send2 = new Discord.RichEmbed()
-            .setAuthor(`${membre.user.username}`)
+            .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
             .setDescription(`**${membre}** a ralenti les messages par un délai de _**${duration}s**_.`)
-            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
-            message.channel.send(send2)
+          message.channel.send(send2)
     }
 }
