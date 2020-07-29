@@ -12,6 +12,9 @@ module.exports = {
         if (isNaN(count)) return message.channel.send("> Veuillez indiquer un nombre valide").then(m => m.delete(5000));
         if (count < 1 || count > 100) return message.channel.send("> Veuillez indiquer un nombre entre 1 et 80").then(m => m.delete(5000));
         message.channel.send("> ``" + count + '`` Messages supprimés !')
+        let send = new Discord.RichEmbed()
+         .setAuthor("Commande effectuée", 'https://emoji.gg/assets/emoji/2990_yes.png')
+         .setDescription("``" + count + "`` **messages ont été supprimés**")
         message.channel.bulkDelete(parseInt(count) + 2)
     }
 }
