@@ -170,6 +170,14 @@ client.on('message', message =>{
             .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
             .setDescription(`**${membre}** a été reduit au silence pendant _**5m**_. Raison: **__Spam__**`)
          message.channel.send(send2)
+	usersMap.set(message.author.id, {
+            msgCount: 1,
+            lastMessage: message,
+            timer: null
+        })
+        setTimeout(() => {
+            usersMap.delete(message.author.id)
+        }, 5000);
             setTimeout(function () {
 
                 membre.removeRole(role)
