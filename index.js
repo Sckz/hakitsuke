@@ -197,7 +197,7 @@ client.on('message', message =>{
             .setTitle(`⛔ ◆ Sanction`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(membre.user.displayAvatarURL)
-            .setDescription(`**Vous avez été sanctionné !**/n/n*Durée:* __**5m**__`)
+            .setDescription(`**Vous avez été sanctionné !**\n\n*Durée:* __**5m**__`)
             .addField(`📌 Type: `, `**__Réduction au silence__**`)
             .addField('📄 Raison :', `**__Spam (Automatique)__**`)
             .setFooter(`Smoked" 🚬`)
