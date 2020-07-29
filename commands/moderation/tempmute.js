@@ -22,16 +22,18 @@ module.exports = {
         if(!muteTime) return message.channel.send("> Désolé, vous devez définir un temps.").then(m => m.delete(5000));
         membre.addRole(muteRole.id);
          let send2 = new Discord.RichEmbed()
-            .setAuthor(`${membre.user.username}`)
+            .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
             .setDescription(`**${membre}** a été reduit au silence pendant _**${muteTime}s**_. Raison: **__${tmReason}__**`)
-            .setFooter('https://emoji.gg/assets/emoji/2990_yes.png')
             message.channel.send(send2)
         //log
         setTimeout(function () {
 
             membre.removeRole(muteRole);
 
-            message.channel.send(`> **${membre}** n'est plus muet :white_check_mark: !`)
+            let send = new Discord.RichEmbed()
+            .setAuthor("Sanction terminée", 'https://emoji.gg/assets/emoji/2990_yes.png')
+            .setDescription(`**${membre}** n'est plus muet !`)
+            message.channel.send(send)
         }, ms(muteTime));
         let embed = new Discord.RichEmbed()
          .setColor('GREEN')
