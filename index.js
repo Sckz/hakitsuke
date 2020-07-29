@@ -105,7 +105,7 @@ let sender2 = msg.guild.channels.get("727897833688268990")
 		.setDescription(`**__Alors pour les boosts, ça se passe comme ça :__**\n\n**Pour ceux qui boost une fois vous aurez :**\n• Le rôle booster :gem: \n• La permission images :camera_with_flash:\n\n**Pour ceux qui boost deux fois vous aurez :**\n• Rôle personnalisé :key2: \n• La permission moove :chess_pawn: \n\n**__Donc voilà on espère que il y’aura le plus de boosts bisouuus! :hearts: __**`)
 		.setImage('https://cdn.discordapp.com/attachments/697812739359244308/737260071716913162/a_0c5b9fd0976a968f58423b03a8411892.gif')
 		.setFooter(`${msg.guild.name}`)
-		let sender6 = msg.guild.channels.get("728354770678710414")
+		let sender6 = msg.guild.channels.get("727908729244352573")
 		sender6.send(m6)
 		//
 		let m7 = new Discord.RichEmbed()
@@ -117,8 +117,8 @@ let sender2 = msg.guild.channels.get("727897833688268990")
 		.setDescription(`<:SMdot:737340714500751400> **Insulte >** Mute temporaire de 30min à 1h selon la gravité et de 1h à 5h si récidive.\n<:SMdot:737340714500751400> **Provoc' >** Avertissement et Mute temporaire de 30 minutes.\n<:SMdot:737340714500751400> **Contournement de Saction >** Mute temporaire de 24h.\n<:SMdot:737340714500751400> **Propos/Image Déplacé(e)(s) [TYPE 1 (opinions politiques, etc)] >** Avertissement et mute temporaire de 20min si récidive.\n<:SMdot:737340714500751400> **Propos/Image Déplacé(e)(s) [TYPE 2 (sexisme,racisme,etc)] >** Mute temporaire de 2h à 5h et mute à vie si récidive.\n<:SMdot:737340714500751400> **Publicité >** Mute temporaire de 3h et mute à vie si récidive.`)
 		.setFooter(`${msg.guild.name}`)
 		let sender7 = msg.guild.channels.get("728238422573187184")
-		sender7.send(m7)
-		sender7.send(m7v2)
+		//sender7.send(m7)
+		//sender7.send(m7v2)
 		
 		
 	}
@@ -254,6 +254,14 @@ client.on("message", async message => {
     const channel = client.channels.find('name', "💬・messages")
     channel.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.tag} ➜ ${message.content}`)
 });
+//
+client.on("message", async message => {
+	if(!message.guid.channels.get()) return;
+	if(message.member.hasPermission('MANAGE_MESSAGES')) return;
+	   
+	message.react("✅")
+	message.react("❎")
+})
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel
