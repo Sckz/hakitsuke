@@ -23,7 +23,7 @@ module.exports = {
         membre.addRole(muteRole.id);
          let send2 = new Discord.RichEmbed()
             .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
-            .setDescription(`**${membre}** a été reduit au silence pendant _**${muteTime}s**_. Raison: **__${tmReason}__**`)
+            .setDescription(`**${membre}** a été reduit au silence pendant _**${muteTime}**_. Raison: **__${tmReason}__**`)
             message.channel.send(send2)
         //log
         setTimeout(function () {
