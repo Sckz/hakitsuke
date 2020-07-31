@@ -14,7 +14,8 @@ module.exports = {
         let send = new Discord.RichEmbed()
          .setAuthor("Commande effectuée", 'https://emoji.gg/assets/emoji/2990_yes.png')
          .setDescription("``" + count + "`` **messages ont été supprimés**")
+         .setFooter('Ce message se supprime automatiquement.')
         message.channel.bulkDelete(parseInt(count) + 1)
-        message.channel.send(send)
+        message.channel.send(send).then(m => m.delete(15000));
     }
 }
