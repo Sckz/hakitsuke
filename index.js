@@ -130,7 +130,7 @@ let phrase = [
 `**Oh! Un ${member.user} est apparu ! Vite il faut le capturer ! <:pokeball:737021679657681029>**`,
 `**OMG! Il y a le fameux ${member.user} qui est la ! ✨**`,
 `**${member.user} a rejoint la partie !** ☑️`,
-`**${member.user} est bien arrivé(e) a destination. 🚀`
+`**${member.user} est bien arrivé(e) a destination.** 🚀`
 ]
 	let embed = new Discord.RichEmbed()
 	 .setColor(16250871)
