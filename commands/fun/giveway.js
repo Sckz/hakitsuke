@@ -10,6 +10,7 @@ module.exports = {
     description: 'Créer un tirage au sort.',
     usage: "<gagnants> <temps(s/m/h)> <lot>",
     run: async (client, message, args) => {
+         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("> Vous n'avez pas la permission").then(m => m.delete(5000));
      var giveawayEmbed = new Discord.RichEmbed()
          .setTitle(`**${item}**`)
          .setColor(16639033)
@@ -23,7 +24,7 @@ module.exports = {
         var time;
         var winnerCount;
      
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("> Vous n'avez pas la permission").then(m => m.delete(5000));
+    
         if (!args[0]) return message.channel.send("> Veuillez spécifier le nombre de gagnant(s).")
         if (!args[1]) return message.channel.send("> Veuillez spécifier le temps que va durer le concours.")
         if (!args[2]) return message.channel.send("> Veuillez spécifier le lot a gagner.")
