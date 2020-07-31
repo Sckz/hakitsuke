@@ -10,7 +10,7 @@ module.exports = {
     description: 'Créer un tirage au sort.',
     usage: "<gagnants> <temps(s/m/h)> <lot>",
     run: async (client, message, args) => {
-         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("> Vous n'avez pas la permission").then(m => m.delete(5000));
+         if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("> Vous n'avez pas la permission").then(m => m.delete(5000));
      var giveawayEmbed = new Discord.RichEmbed()
          .setTitle(`**${item}**`)
          .setColor(16639033)
