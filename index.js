@@ -124,6 +124,7 @@ let sender2 = msg.guild.channels.get("727897833688268990")
 		.setTitle("**▬ 🎟 Jeux 🎟 ▬**")
 		.setDescription(`**Bienvenue dans l’entrée jeux ! 🎮 __Vous pouvez prendre votre ticket en réagissant ci-dessous et avoir accès aux jeux suivants:__**\n\n• Mudae 💖\n• A la suite 🎲\n• Pokemon 🔥\n • Akinator 🧞\n\n__*D'autres jeux sont en développement.*__\n\n**▬▬▬▬▬**\n\n*__**Quelques informations :**__*\n\n• Il est obligatoire de compter chacun son tour dans le salon <#728297213335437392>\n• Le delay de la commande **;pokemon** est de 3h\n• Vous pouvez utiliser le bot mudae 10 fois toutes les heures`)
 		.setFooter(`${msg.guild.name}`)
+		.setImage('https://cdn.discordapp.com/attachments/697812842749100112/710409733634261002/0d2152b76fafe2dcbb094424b3d58923.gif')
 		let sender8 = msg.guild.channels.get("728311724519850065")
 		sender8.send(m8)
 		
