@@ -106,7 +106,7 @@ let sender2 = msg.guild.channels.get("727897833688268990")
 		.setImage('https://cdn.discordapp.com/attachments/697812739359244308/737260071716913162/a_0c5b9fd0976a968f58423b03a8411892.gif')
 		.setFooter(`${msg.guild.name}`)
 		let sender6 = msg.guild.channels.get("727908729244352573")
-		sender6.send(m6)
+		//sender6.send(m6)
 		//
 		let m7 = new Discord.RichEmbed()
 		.setTitle("**▬ 📜 Règlement Staff 📜 ▬**")
@@ -119,7 +119,13 @@ let sender2 = msg.guild.channels.get("727897833688268990")
 		let sender7 = msg.guild.channels.get("728238422573187184")
 		//sender7.send(m7)
 		//sender7.send(m7v2)
-		
+		//
+		let m8 = new Discord.RichEmbed()
+		.setTitle("**▬ 🎟 Jeux 🎟 ▬**")
+		.setDescription(`**Bienvenue dans l’entrée jeux ! 🎮 __Vous pouvez prendre votre ticket en réagissant ci-dessous et avoir accès aux jeux suivants:**\n\n• Mudae 💖\n• A la suite 🎲\n• Pokemon 🔥\n • Akinator 🧞\n\n__*D'autres jeux sont en développement.*__\n\n**▬▬▬▬▬**\n\n*__**Quelques informations :**__*\n\n• Il est obligatoire de compter chacun son tour dans le salon <#728297213335437392>\n• Le delay de la commande **;pokemon** est de 3h\n• Vous pouvez utiliser le bot mudae 10 fois toutes les heures`)
+		.setFooter(`${msg.guild.name}`)
+		let sender8 = msg.guild.channels.get("728311724519850065")
+		sender8.send(m8)
 		
 	}
 })
