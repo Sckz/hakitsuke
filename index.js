@@ -216,7 +216,7 @@ client.on('message', message =>{
             membre.addRole(role);
 	let send2 = new Discord.RichEmbed()
             .setAuthor("Sanction appliquée", 'https://emoji.gg/assets/emoji/2990_yes.png')
-            .setDescription(`**${membre}** a été reduit au silence pendant _**5m**_. Raison: **__Spam__**`)
+            .setDescription(`**${membre}** a été reduit au silence pendant _**10m**_. Raison: **__Spam__**`)
          message.channel.send(send2)
 	usersMap.set(message.author.id, {
             msgCount: 1,
@@ -234,13 +234,13 @@ client.on('message', message =>{
             .setAuthor("Sanction terminée", 'https://emoji.gg/assets/emoji/2990_yes.png')
             .setDescription(`**${membre}** n'est plus muet !`)
             message.channel.send(send)
-            }, ms("5m"));
+            }, ms("10m"));
            let embed = new Discord.RichEmbed()
             .setColor('GREEN')
             .setTitle(`🔕 ◆ MUTE TEMPORAIRE`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(message.author.displayAvatarURL)
-            .setDescription(membre + ` a été rendu muet temporairement pendant **5m**`)
+            .setDescription(membre + ` a été rendu muet temporairement pendant **10m**`)
             .addField(`📌 Modérateur: `, "**Automatique**")
             .addField('📄 Raison :', `**__Spam__**`)
             .setFooter(`Log Modération`)
@@ -253,7 +253,7 @@ client.on('message', message =>{
             .setTitle(`⛔ ◆ Sanction`)
             .setAuthor(client.user.username, client.user.displayAvatarURL)
             .setThumbnail(membre.user.displayAvatarURL)
-            .setDescription(`**Vous avez été sanctionné !**\n\n*Durée:* __**5m**__`)
+            .setDescription(`**Vous avez été sanctionné !**\n\n*Durée:* __**10m**__`)
             .addField(`📌 Type: `, `**__Réduction au silence__**`)
             .addField('📄 Raison :', `**__Spam (Automatique)__**`)
             .setFooter(`Smoked" 🚬`)
@@ -282,13 +282,7 @@ client.on("message", async message => {
     channel.send(`(${moment().format('MMMM Do YYYY, h:mm:ss a')}) - ${message.author.tag} ➜ ${message.content}`)
 });
 //
-client.on("message", async message => {
-	if(!message.guid.channels.get()) return;
-	if(message.member.hasPermission('MANAGE_MESSAGES')) return;
-	   
-	message.react("✅")
-	message.react("❎")
-})
+
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel
