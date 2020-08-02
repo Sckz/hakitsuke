@@ -15,18 +15,18 @@ module.exports = {
          .setFooter('Ce message se supprime automatiquement.')
                 if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(e1).then(m => m.delete(5000));
                 let member = message.mentions.members.first()
-                 let e2 = new Discord.RichEmbed()
+                 let errs = new Discord.RichEmbed()
          .setAuthor("Une erreur est survenue", 'https://emoji.gg/assets/emoji/7685_no.png')
-         .setDescription(`**Aucun utilisateur a été mentionné.**`)
+         .setDescription(`**Erreur de syntaxe**\n\n` + "`/warn <utilisateur> <raison>`")
          .setFooter('Ce message se supprime automatiquement.')
-                if (!member) return message.channel.send(e2).then(m => m.delete(5000));
+                if (!member) return message.channel.send(errs).then(m => m.delete(5000));
          let e3 = new Discord.RichEmbed()
          .setAuthor("Une erreur est survenue", 'https://emoji.gg/assets/emoji/7685_no.png')
          .setDescription(`**Cet utilisateur ne peut pas être sanctionné**`)
          .setFooter('Ce message se supprime automatiquement.')
                 if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send(e3).then(m => m.delete(5000));
                 let warnreason = args.slice(1).join(' ')
-                if (!warnreason) return;
+                if (!warnreason) return message.channel.send(errs)
                 if (!warns[member.id]) {
                     warns[member.id] = []
                 }
