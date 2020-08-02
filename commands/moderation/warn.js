@@ -9,11 +9,22 @@ module.exports = {
     usage: "<utilisateur> [raison]",
     run: async (client, message, args) => {
                 message.channel.bulkDelete(parseInt(1))
-
-                if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("> Vous n'avez pas la permission !").then(m => m.delete(5000));
+         let e1 = new Discord.RichEmbed()
+         .setAuthor("Une erreur est survenue", 'https://emoji.gg/assets/emoji/7685_no.png')
+         .setDescription(`**Permission manquante.**`)
+         .setFooter('Ce message se supprime automatiquement.')
+                if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(e1).then(m => m.delete(5000));
                 let member = message.mentions.members.first()
-                if (!member) return message.channel.send("> Veuillez mentionner un utilisateur !").then(m => m.delete(5000));
-                if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send("> Vous ne pouvez pas warn cet utilisateur !").then(m => m.delete(5000));
+                 let e2 = new Discord.RichEmbed()
+         .setAuthor("Une erreur est survenue", 'https://emoji.gg/assets/emoji/7685_no.png')
+         .setDescription(`**Aucun utilisateur a été mentionné.**`)
+         .setFooter('Ce message se supprime automatiquement.')
+                if (!member) return message.channel.send(e2).then(m => m.delete(5000));
+         let e3 = new Discord.RichEmbed()
+         .setAuthor("Une erreur est survenue", 'https://emoji.gg/assets/emoji/7685_no.png')
+         .setDescription(`**Cet utilisateur ne peut pas être sanctionné**`)
+         .setFooter('Ce message se supprime automatiquement.')
+                if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send(e3).then(m => m.delete(5000));
                 let warnreason = args.slice(1).join(' ')
                 if (!warnreason) return;
                 if (!warns[member.id]) {
