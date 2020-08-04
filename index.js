@@ -63,7 +63,7 @@ const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 		.setImage("https://cdn.discordapp.com/attachments/728659758793621566/735439027133743144/tenor_2_1.gif")
 		.setFooter("by SCKZ.")
 		
-		let sender = msg.guild.channels.get("727931482127204522")
+		let sender = msg.guild.channels.get("739977087049400392")
 		sender.send(m1)
 		//
 		let m0 = new Discord.RichEmbed()
