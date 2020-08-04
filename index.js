@@ -156,8 +156,8 @@ client.on('message', async message => {
 	if (args[0] === "roles") {
 		 let senderRole = message.guild.channels.get("739977087997444201")
 		 //
-		 let sexe1 = message.guild.roles.cache.get("739977086923571203")
-		 let sexe2 = message.guild.roles.cache.get("739977086923571202")
+		 let sexe1 = message.guild.roles.get("739977086923571203")
+		 let sexe2 = message.guild.roles.get("739977086923571202")
 		 let sexe1e = "🚹"
 		 let sexe2e = "🚺"
 		 let sexe = new Discord.RichEmbed()
@@ -168,9 +168,9 @@ client.on('message', async message => {
 		 sexesend.react("🚹")
 		 sexesend.react("🚺")
 		 //
-		 let c1 = message.guild.roles.cache.get("739977086923571200")
-		 let c2 = message.guild.roles.cache.get("739977086890147879")
-		 let c3 = message.guild.roles.cache.get("739977086890147878")
+		 let c1 = message.guild.roles.get("739977086923571200")
+		 let c2 = message.guild.roles.get("739977086890147879")
+		 let c3 = message.guild.roles.get("739977086890147878")
 		 let c1e = "❤️"
 		 let c2e = "💔"
 		 let c3e = "💞"
@@ -183,10 +183,10 @@ client.on('message', async message => {
 		 couplesend.react("💔")
 		 couplesend.react("💞")
 		//
-		 let a1 = message.guild.roles.cache.get("739977086890147876")
-		 let a2 = message.guild.roles.cache.get("739977086890147875")
-		 let a3 = message.guild.roles.cache.get("739977086890147874")
-		 let a4 = message.guild.roles.cache.get("739977086890147873")
+		 let a1 = message.guild.roles.get("739977086890147876")
+		 let a2 = message.guild.roles.get("739977086890147875")
+		 let a3 = message.guild.roles.get("739977086890147874")
+		 let a4 = message.guild.roles.get("739977086890147873")
 		 let a1e = "🎮"
 		 let a2e = "✏️"
 		 let a3e = "㊙️"
@@ -201,8 +201,8 @@ client.on('message', async message => {
 		 actsend.react("㊙️")
 		 actsend.react("🎵")
 		//
-		let mm1 = message.guild.roles.cache.get("739977086890147871")
-		let mm2 = message.guild.roles.cache.get("739977086890147870")
+		let mm1 = message.guild.roles.get("739977086890147871")
+		let mm2 = message.guild.roles.get("739977086890147870")
 		let mm1e = "🔞"
 		let mm2e = "🚬"
 		let age = new Discord.RichEmbed()
@@ -213,10 +213,10 @@ client.on('message', async message => {
 		 agesend.react("🔞")
 		 agesend.react("🚬")
 		//
-		 let os1 = message.guild.roles.cache.get("739977086864982077")
-		 let os2 = message.guild.roles.cache.get("739977086864982076")
-		 let os3 = message.guild.roles.cache.get("739977086579507350")
-		 let os4 = message.guild.roles.cache.get("739977086579507349")
+		 let os1 = message.guild.roles.get("739977086864982077")
+		 let os2 = message.guild.roles.get("739977086864982076")
+		 let os3 = message.guild.roles.get("739977086579507350")
+		 let os4 = message.guild.roles.get("739977086579507349")
 		 let os1e = "👅"
 		 let os2e = "🌈"
 		 let os3e = "👀"
@@ -235,29 +235,29 @@ client.on('message', async message => {
 })
 client.on('messageReactionAdd', (reaction, user) => {
 	const message = reaction.message;
-	const member = message.guild.members.cache.get(user.id);
+	const member = message.guild.members.get(user.id);
 	const emojis = reaction.emoji.name;
-	const channel = message.guild.channels.cache.find(c => c.id === '739977087997444201')
+	const channel = message.guild.channels.find(c => c.id === '739977087997444201')
 	//
-	const sexe1 = message.guild.roles.cache.get("739977086923571203")
-	const sexe2 = message.guild.roles.cache.get("739977086923571202")
+	const sexe1 = message.guild.roles.get("739977086923571203")
+	const sexe2 = message.guild.roles.get("739977086923571202")
 	//
-	const c1 = message.guild.roles.cache.get("739977086923571200")
-	const c2 = message.guild.roles.cache.get("739977086890147879")
-	const c3 = message.guild.roles.cache.get("739977086890147878")
+	const c1 = message.guild.roles.get("739977086923571200")
+	const c2 = message.guild.roles.get("739977086890147879")
+	const c3 = message.guild.roles.get("739977086890147878")
 	//
-	const a1 = message.guild.roles.cache.get("739977086890147876")
-	const a2 = message.guild.roles.cache.get("739977086890147875")
-	const a3 = message.guild.roles.cache.get("739977086890147874")
-	const a4 = message.guild.roles.cache.get("739977086890147873")
+	const a1 = message.guild.roles.get("739977086890147876")
+	const a2 = message.guild.roles.get("739977086890147875")
+	const a3 = message.guild.roles.get("739977086890147874")
+	const a4 = message.guild.roles.get("739977086890147873")
 	//
-	const mm1 = message.guild.roles.cache.get("739977086890147871")
-	const mm2 = message.guild.roles.cache.get("739977086890147870")
+	const mm1 = message.guild.roles.get("739977086890147871")
+	const mm2 = message.guild.roles.get("739977086890147870")
 	//
-	const os1 = message.guild.roles.cache.get("739977086864982077")
-	const os2 = message.guild.roles.cache.get("739977086864982076")
-	const os3 = message.guild.roles.cache.get("739977086579507350")
-	const os4 = message.guild.roles.cache.get("739977086579507349")
+	const os1 = message.guild.roles.get("739977086864982077")
+	const os2 = message.guild.roles.get("739977086864982076")
+	const os3 = message.guild.roles.get("739977086579507350")
+	const os4 = message.guild.roles.get("739977086579507349")
 	//code
 	if (member.user.bot) return;
 	
@@ -314,29 +314,29 @@ client.on('messageReactionAdd', (reaction, user) => {
 })
 client.on('messageReactionRemove', (reaction, user) => {
 	const message = reaction.message;
-	const member = message.guild.members.cache.get(user.id);
+	const member = message.guild.members.get(user.id);
 	const emojis = reaction.emoji.name;
-	const channel = message.guild.channels.cache.find(c => c.id === '739977087997444201')
+	const channel = message.guild.channels.find(c => c.id === '739977087997444201')
 	//
-	const sexe1 = message.guild.roles.cache.get("739977086923571203")
-	const sexe2 = message.guild.roles.cache.get("739977086923571202")
+	const sexe1 = message.guild.roles.get("739977086923571203")
+	const sexe2 = message.guild.roles.get("739977086923571202")
 	//
-	const c1 = message.guild.roles.cache.get("739977086923571200")
-	const c2 = message.guild.roles.cache.get("739977086890147879")
-	const c3 = message.guild.roles.cache.get("739977086890147878")
+	const c1 = message.guild.roles.get("739977086923571200")
+	const c2 = message.guild.roles.get("739977086890147879")
+	const c3 = message.guild.roles.get("739977086890147878")
 	//
-	const a1 = message.guild.roles.cache.get("739977086890147876")
-	const a2 = message.guild.roles.cache.get("739977086890147875")
-	const a3 = message.guild.roles.cache.get("739977086890147874")
-	const a4 = message.guild.roles.cache.get("739977086890147873")
+	const a1 = message.guild.roles.get("739977086890147876")
+	const a2 = message.guild.roles.get("739977086890147875")
+	const a3 = message.guild.roles.get("739977086890147874")
+	const a4 = message.guild.roles.get("739977086890147873")
 	//
-	const mm1 = message.guild.roles.cache.get("739977086890147871")
-	const mm2 = message.guild.roles.cache.get("739977086890147870")
+	const mm1 = message.guild.roles.get("739977086890147871")
+	const mm2 = message.guild.roles.get("739977086890147870")
 	//
-	const os1 = message.guild.roles.cache.get("739977086864982077")
-	const os2 = message.guild.roles.cache.get("739977086864982076")
-	const os3 = message.guild.roles.cache.get("739977086579507350")
-	const os4 = message.guild.roles.cache.get("739977086579507349")
+	const os1 = message.guild.roles.get("739977086864982077")
+	const os2 = message.guild.roles.get("739977086864982076")
+	const os3 = message.guild.roles.get("739977086579507350")
+	const os4 = message.guild.roles.get("739977086579507349")
 	//code
 	if (member.user.bot) return;
 	
