@@ -154,12 +154,12 @@ let sender2 = msg.guild.channels.get("739977087330549782")
 client.on('message', async message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	if (args[0] === "roles") {
-		 const senderRole = message.guild.channels.get("739977087997444201")
+		 let senderRole = message.guild.channels.get("739977087997444201")
 		 //
-		 const sexe1 = message.guild.roles.cache.get("739977086923571203")
-		 const sexe2 = message.guild.roles.cache.get("739977086923571202")
-		 const sexe1e = "🚹"
-		 const sexe2e = "🚺"
+		 let sexe1 = message.guild.roles.cache.get("739977086923571203")
+		 let sexe2 = message.guild.roles.cache.get("739977086923571202")
+		 let sexe1e = "🚹"
+		 let sexe2e = "🚺"
 		 let sexe = new Discord.RichEmbed()
 		  .setTitle("**Sexe**")
 		  .setDescription(`${sexe1e} **▬** ${sexe1.toString()}\n${sexe2e} **▬** ${sexe2.toString()}`)
@@ -168,12 +168,12 @@ client.on('message', async message => {
 		 sexesend.react("🚹")
 		 sexesend.react("🚺")
 		 //
-		 const c1 = message.guild.roles.cache.get("739977086923571200")
-		 const c2 = message.guild.roles.cache.get("739977086890147879")
-		 const c3 = message.guild.roles.cache.get("739977086890147878")
-		 const c1e = "❤️"
-		 const c2e = "💔"
-		 const c3e = "💞"
+		 let c1 = message.guild.roles.cache.get("739977086923571200")
+		 let c2 = message.guild.roles.cache.get("739977086890147879")
+		 let c3 = message.guild.roles.cache.get("739977086890147878")
+		 let c1e = "❤️"
+		 let c2e = "💔"
+		 let c3e = "💞"
 		 let couple = new Discord.RichEmbed()
 		  .setTitle("**Couple**")
 		  .setDescription(`${c1e} **▬** ${c1.toString()}\n${c2e} **▬** ${c2.toString()}\n${c3e} **▬** ${c3.toString()}`)
@@ -183,14 +183,14 @@ client.on('message', async message => {
 		 couplesend.react("💔")
 		 couplesend.react("💞")
 		//
-		const a1 = message.guild.roles.cache.get("739977086890147876")
-		 const a2 = message.guild.roles.cache.get("739977086890147875")
-		 const a3 = message.guild.roles.cache.get("739977086890147874")
-		 const a4 = message.guild.roles.cache.get("739977086890147873")
-		 const a1e = "🎮"
-		 const a2e = "✏️"
-		 const a3e = "㊙️"
-		 const a4e = "🎵"
+		 let a1 = message.guild.roles.cache.get("739977086890147876")
+		 let a2 = message.guild.roles.cache.get("739977086890147875")
+		 let a3 = message.guild.roles.cache.get("739977086890147874")
+		 let a4 = message.guild.roles.cache.get("739977086890147873")
+		 let a1e = "🎮"
+		 let a2e = "✏️"
+		 let a3e = "㊙️"
+		 let a4e = "🎵"
 		 let act = new Discord.RichEmbed()
 		  .setTitle("**Activités**")
 		  .setDescription(`${a1e} **▬** ${a1.toString()}\n${a2e} **▬** ${a2.toString()}\n${a3e} **▬** ${a3.toString()}\n${a4e} **▬** ${a4.toString()}`)
@@ -201,10 +201,10 @@ client.on('message', async message => {
 		 actsend.react("㊙️")
 		 actsend.react("🎵")
 		//
-		const mm1 = message.guild.roles.cache.get("739977086890147871")
-		const mm2 = message.guild.roles.cache.get("739977086890147870")
-		const mm1e = "🔞"
-		const mm2e = "🚬"
+		let mm1 = message.guild.roles.cache.get("739977086890147871")
+		let mm2 = message.guild.roles.cache.get("739977086890147870")
+		let mm1e = "🔞"
+		let mm2e = "🚬"
 		let age = new Discord.RichEmbed()
 		  .setTitle("**Age**")
 		  .setDescription(`${mm1e} **▬** ${mm1.toString()}\n${mm2e} **▬** ${mm2.toString()}`)
@@ -213,14 +213,14 @@ client.on('message', async message => {
 		 agesend.react("🔞")
 		 agesend.react("🚬")
 		//
-		const os1 = message.guild.roles.cache.get("739977086864982077")
-		 const os2 = message.guild.roles.cache.get("739977086864982076")
-		 const os3 = message.guild.roles.cache.get("739977086579507350")
-		 const os4 = message.guild.roles.cache.get("739977086579507349")
-		 const os1e = "👅"
-		 const os2e = "🌈"
-		 const os3e = "👀"
-		 const os4e = "🏴"
+		 let os1 = message.guild.roles.cache.get("739977086864982077")
+		 let os2 = message.guild.roles.cache.get("739977086864982076")
+		 let os3 = message.guild.roles.cache.get("739977086579507350")
+		 let os4 = message.guild.roles.cache.get("739977086579507349")
+		 let os1e = "👅"
+		 let os2e = "🌈"
+		 let os3e = "👀"
+		 let os4e = "🏴"
 		 let OS = new Discord.RichEmbed()
 		  .setTitle("**Activités**")
 		  .setDescription(`${os1e} **▬** ${os1.toString()}\n${os2e} **▬** ${os2.toString()}\n${os3e} **▬** ${os3.toString()}\n${os4e} **▬** ${os4.toString()}`)
