@@ -64,14 +64,14 @@ const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 		.setFooter("by SCKZ.")
 		
 		let sender = msg.guild.channels.get("739977087049400392")
-		sender.send(m1)
+		//sender.send(m1)
 		//
 		let m0 = new Discord.RichEmbed()
 		.setTitle("**▬ 📜 Reglement 📜 ▬**")
 		.setDescription(`<:SMdot:737340714500751400> **Pas d'harcèlement envers d'autres joueurs.** Racisme, sexisme, xénophobie, transphobie, homophobie, misogynie, etc. n'est autorisé.\n <:SMdot:737340714500751400> **Gardez toute discussion civile** et dans les bons canaux. Nous pouvons vous demander de déplacer votre conversation.\n <:SMdot:737340714500751400> **Pas de langage inapproprié.** Restez respectueux envers autrui.\n <:SMdot:737340714500751400> **Pas de spam ou d'inondation des salons avec des messages.** Il est également interdit d'encourager les autres à envoyer du spam.\n <:SMdot:737340714500751400> **Aucun nom d'utilisateur**, statut ou photo de profil inapproprié ou offensant n'est permis. Il peut vous être demandé de les modifier.\n <:SMdot:737340714500751400> **Pas de politique.** Il n'est pas permis de parler de problèmes graves impliquant des représentants du gouvernement, des partis politiques, des religions ou des désaccords géopolitiques. Même si ces sujets sont abordés de manière civile, ce n'est pas le bon espace pour ces conversations.\n <:SMdot:737340714500751400> **Pas d'autopromotion**, de sollicitation ou de publicité dans les salles de discussion ou générales. Cela inclut également les DM d'un utilisateur.\n <:SMdot:737340714500751400> **Les modérateurs ont le dernier mot.** Écoutez et respectez les bénévoles qui font fonctionner ce serveur.\n <:SMdot:737340714500751400> **Respectez les conditions d'utilisation et les directives de Discord.**\n<:SMFleche:737340683618222210> https://discord.com/terms \n <:SMFleche:737340683618222210> https://discord.com/guidelines`)
 		.setFooter(`${msg.guild.name}`)
 let sender2 = msg.guild.channels.get("739977087330549782")
-sender2.send(m0)
+//sender2.send(m0)
 		//
 		let m2 = new Discord.RichEmbed()
 		.setTitle("**▬ 🌙 Présentation 🌙 ▬**")
@@ -81,21 +81,21 @@ sender2.send(m0)
 		//
 		let m3 = new Discord.RichEmbed()
 		.setTitle("**▬ 🌈 Aide-nous ! 🌈 ▬**")
-		.setDescription(`__**Tu veux nous soutenir et avoir le rôle <@&728554632120369172> ?**__\n\n**Tu as juste à mettre le lien du discord en statut et le tour est joué :SM6385_christmaspartyparrot: **\n**Lien du discord  : https://discord.gg/rV5R2Ge **\n**_PS: pour le recevoir il te suffit de contacter un <@&727635160375492628> _**`)
+		.setDescription(`__**Tu veux nous soutenir et avoir le rôle <@&739977087003131912> ?**__\n\n**Tu as juste à mettre le lien du discord en statut et le tour est joué :SM6385_christmaspartyparrot: **\n**Lien du discord  : https://discord.gg/rV5R2Ge **\n**_PS: pour le recevoir il te suffit de contacter un <@&739977087045075008> _**`)
 		.setFooter(`${msg.guild.name}`)
 		let sender3 = msg.guild.channels.get("739977087330549786")
 		sender3.send(m3)
 		//
 		let m4 = new Discord.RichEmbed()
 		.setTitle("**▬ 🦑 Grades 🦑 ▬**")
-		.setDescription(`𝟱 ➠ <@&727878363464859750> \n𝟭𝟬 ➠ <@&727879022599733338> \n𝟭𝟱 ➠ <@&727659531022237786> \n𝟮𝟬 ➠ <@&727896528076668948> \n𝟮𝟱 ➠ <@&727901183209111582> \n𝟯𝟬 ➠ <@&727901433466191942> \n𝟯𝟱 ➠ <@&727901885364830218> \n𝟰𝟬 ➠ <@&727902523104690267> \n𝟰𝟱 ➠ <@&727905648137994270> \n𝟱𝟬 ➠  <@&727906598370148402> \n𝟱𝟱 ➠ <@&727907532089065543> \n𝟲𝟬 ➠ <@&727908327442481183>`)
+		.setDescription(`𝟱 ➠ <@&739977086948737095> \n𝟭𝟬 ➠ <@&739977086948737096> \n𝟭𝟱 ➠ <@&739977086948737097> \n𝟮𝟬 ➠ <@&739977086948737098> \n𝟮𝟱 ➠ <@&739977086948737099> \n𝟯𝟬 ➠ <@&739977086948737100> \n𝟯𝟱 ➠ <@&739977086948737101> \n𝟰𝟬 ➠ <@&739977086948737102> \n𝟰𝟱 ➠ <@&739977086948737103> \n𝟱𝟬 ➠  <@&739977086978228324> \n𝟱𝟱 ➠ <@&739977086978228325> \n𝟲𝟬 ➠ <@&739977086978228326>`)
 		.setFooter(`${msg.guild.name}`)
 		.setImage("https://cdn.discordapp.com/attachments/697812739359244308/736949465428131910/giphy.gif")
 		let sender4 = msg.guild.channels.get("739977087997444203")
 		sender4.send(m4)
 		//
 		let m5 = new Discord.RichEmbed()
-		.setDescription(`**Heyy !!** ❤️ \n\n**Merci pour ton boost BG/BLG** 👑 \n**Pour activer ton grade personnalisé il te suffit de ping un créateur et d'attendre ça réponse !** \n\n*__(le spam de ping est INTERDIT ,vous risquez d'etre sanctionné si c'est le cas)__* ⚠️\n <@&727959571737608252>`)
+		.setDescription(`**Heyy !!** ❤️ \n\n**Merci pour ton boost BG/BLG** 👑 \n**Pour activer ton grade personnalisé il te suffit de ping un créateur et d'attendre ça réponse !** \n\n*__(le spam de ping est INTERDIT ,vous risquez d'etre sanctionné si c'est le cas)__* ⚠️\n <@&739977087045075008>`)
 		.setFooter(`${msg.guild.name}`)
 		let sender5 = msg.guild.channels.get("739977087519162452")
 		sender5.send(m5)
@@ -106,7 +106,7 @@ sender2.send(m0)
 		.setImage('https://cdn.discordapp.com/attachments/697812739359244308/737260071716913162/a_0c5b9fd0976a968f58423b03a8411892.gif')
 		.setFooter(`${msg.guild.name}`)
 		let sender6 = msg.guild.channels.get("739977087330549785")
-		sender6.send(m6)
+		//sender6.send(m6)
 		//
 		let m7 = new Discord.RichEmbed()
 		.setTitle("**▬ 📜 Règlement Staff 📜 ▬**")
@@ -117,12 +117,12 @@ sender2.send(m0)
 		.setDescription(`<:SMdot:737340714500751400> **Insulte >** Mute temporaire de 30min à 1h selon la gravité et de 1h à 5h si récidive.\n<:SMdot:737340714500751400> **Provoc' >** Avertissement et Mute temporaire de 30 minutes.\n<:SMdot:737340714500751400> **Contournement de Saction >** Mute temporaire de 24h.\n<:SMdot:737340714500751400> **Propos/Image Déplacé(e)(s) [TYPE 1 (opinions politiques, etc)] >** Avertissement et mute temporaire de 20min si récidive.\n<:SMdot:737340714500751400> **Propos/Image Déplacé(e)(s) [TYPE 2 (sexisme,racisme,etc)] >** Mute temporaire de 2h à 5h et mute à vie si récidive.\n<:SMdot:737340714500751400> **Publicité >** Mute temporaire de 3h et mute à vie si récidive.`)
 		.setFooter(`${msg.guild.name}`)
 		let sender7 = msg.guild.channels.get("739977089901395982")
-		sender7.send(m7)
-		sender7.send(m7v2)
+		//sender7.send(m7)
+		//sender7.send(m7v2)
 		//
 		let m8 = new Discord.RichEmbed()
 		.setTitle("**▬ 🎟 Jeux 🎟 ▬**")
-		.setDescription(`**Bienvenue dans l’entrée jeux ! 🎮 __Vous pouvez prendre votre ticket en réagissant ci-dessous et avoir accès aux jeux suivants:__**\n\n• Mudae 💖\n• A la suite 🎲\n• Pokemon 🔥\n • Akinator 🧞\n\n__*D'autres jeux sont en développement.*__\n\n**▬▬▬▬▬**\n\n*__**Quelques informations :**__*\n\n• Il est obligatoire de compter chacun son tour dans le salon <#728297213335437392>\n• Le delay de la commande **;pokemon** est de 3h\n• Vous pouvez utiliser le bot mudae 10 fois toutes les heures`)
+		.setDescription(`**Bienvenue dans l’entrée jeux ! 🎮 __Vous pouvez prendre votre ticket en réagissant ci-dessous et avoir accès aux jeux suivants:__**\n\n• Mudae 💖\n• A la suite 🎲\n• Pokemon 🔥\n • Akinator 🧞\n\n__*D'autres jeux sont en développement.*__\n\n**▬▬▬▬▬**\n\n*__**Quelques informations :**__*\n\n• Il est obligatoire de compter chacun son tour dans le salon <#739977089268056198>\n• Le delay de la commande **;pokemon** est de 3h\n• Vous pouvez utiliser le bot mudae 10 fois toutes les heures`)
 		.setFooter(`${msg.guild.name}`)
 		.setImage('https://cdn.discordapp.com/attachments/697812842749100112/710409733634261002/0d2152b76fafe2dcbb094424b3d58923.gif')
 		let sender8 = msg.guild.channels.get("739977088844693674")
@@ -132,7 +132,7 @@ sender2.send(m0)
 		.setDescription(`**__*Akinator 🧞*__**\n\n**!aki** | Commencer à jouer.\n**!aki stop** | Arrêter le jeu.\n**!aki language fr** | Définir le jeu en Frnaçais\n\n**__*Mudae 💖*__**\n\n**$m** | Tirer des hommes et des femmes.\n**$w** | Tirer des femmes\n**$h** | Tirer des hommes.\n\n**__*Pokemon 🔥*__**\n\n**;help pokemon** | Voir les commandes.\n\n**▬▬▬▬▬**\n\n__Si vous avez besoins d'aide n'hésitez pas à mp un membre du staff.__`)
 		.setFooter(`${msg.guild.name}`)
 		let sender8v2 = msg.guild.channels.get("739977089268056196")
-		sender8v2.send(m8v2)
+		//sender8v2.send(m8v2)
 		//
 		let m9 = new Discord.RichEmbed()
 		.setTitle("**▬ 🔖 Casino 🔖 ▬**")
@@ -140,21 +140,262 @@ sender2.send(m0)
 		.setFooter(`${msg.guild.name}`)
 		.setImage('https://media.giphy.com/media/E2UlE5Of9zEjK/giphy.gif')
 		let sender9 = msg.guild.channels.get('739977089268056203')
-		sender9.send(m9)
+		//sender9.send(m9)
 		let m9v2 = new Discord.RichEmbed()
 		.setTitle("**▬ 📋 Commandes Casino 📋 ▬**")
 		.setDescription(`**__Comment s'enrichir ?__**\n**_Pour s'enrichir il y a plusieurs commandes :_**\n\n**!!work** | S'enrichir avec 100% de chance de reussite.\n**!!slut** | S'enrichir avec 60% de chance de reussite\n**!!crime** | S'enrichir avec 20% de chance de réussite\n**!!rob <user>** | Voler une somme aléatoire d'un utilisateur\n\n**__Qui a-t-il comme jeux?__**\n_**Il existe plusieurs jeux dans le casino:**_\n\n**!!blackjack <montant>** | Jouer au blackjack.\n**!!roulette <montant>** | Jouer à la roulette\n**!!slot-machine <montant>** | Jouer à la machine à sous.\n\n**__Comment utiliser l'argent?__**\n\n**!!bal** | Voir l'argent que vous possedez.\n**!!with <montant>** | Retirer l'argent de votre banque.\n**!!dep <montant>** | Mettre de l'argent dans votre banque pour éviter les vols.\n\n**▬▬▬▬▬**\n\n__Si vous avez besoins d'aide n'hésitez pas à mp un membre du staff.__`)
 		.setFooter(`${msg.guild.name}`)
 		let sender9v2 = msg.guild.channels.get("739977089268056204")
-		sender9v2.send(m9v2)
+		//sender9v2.send(m9v2)
 		
+	}
+})
+//ReactionRole
+client.on('message', async message => {
+	const args = message.content.slice(prefix.length).trim().split(/ +/g);
+	if (args[0] === "roles") {
+		 const senderRole = message.guild.channels.get("")
+		 const senderRole2 = message.guild.channels.get("")
+		 //
+		 const sexe1 = message.guild.roles.cache.get("739977086923571203")
+		 const sexe2 = message.guild.roles.cache.get("739977086923571202")
+		 const sexe1e = "🚹"
+		 const sexe2e = "🚺"
+		 let sexe = new Discord.RichEmbed()
+		  .setTitle("**Sexe**")
+		  .setDescription(`${sexe1e} **▬** ${sexe1.toString()}\n${sexe2e} **▬** ${sexe2.toString()}`)
+		  .setFooter('Veuillez réagir ci-dessous.')
+		 let sexesend = await senderRole.send(sexe)
+		 sexesend.react("🚹")
+		 sexesend.react("🚺")
+		 //
+		 const c1 = message.guild.roles.cache.get("739977086923571200")
+		 const c2 = message.guild.roles.cache.get("739977086890147879")
+		 const c3 = message.guild.roles.cache.get("739977086890147878")
+		 const c1e = "❤️"
+		 const c2e = "💔"
+		 const c3e = "💞"
+		 let couple = new Discord.RichEmbed()
+		  .setTitle("**Couple**")
+		  .setDescription(`${c1e} **▬** ${c1.toString()}\n${c2e} **▬** ${c2.toString()}\n${c3e} **▬** ${c3.toString()}`)
+		  .setFooter('Veuillez réagir ci-dessous.')
+		 let couplesend = await senderRole.send(couple)
+		 couplesend.react("❤️")
+		 couplesend.react("💔")
+		 couplesend.react("💞")
+		//
+		const a1 = message.guild.roles.cache.get("739977086890147876")
+		 const a2 = message.guild.roles.cache.get("739977086890147875")
+		 const a3 = message.guild.roles.cache.get("739977086890147874")
+		 const a4 = message.guild.roles.cache.get("739977086890147873")
+		 const a1e = "🎮"
+		 const a2e = "✏️"
+		 const a3e = "㊙️"
+		 const a4e = "🎵"
+		 let act = new Discord.RichEmbed()
+		  .setTitle("**Activités**")
+		  .setDescription(`${a1e} **▬** ${a1.toString()}\n${a2e} **▬** ${a2.toString()}\n${a3e} **▬** ${a3.toString()}\n${a4e} **▬** ${a4.toString()}`)
+		  .setFooter('Veuillez réagir ci-dessous.')
+		 let actsend = await senderRole.send(act)
+		 actsend.react("🎮")
+		 actsend.react("✏️")
+		 actsend.react("㊙️")
+		 actsend.react("🎵")
+		//
+		const mm1 = message.guild.roles.cache.get("739977086890147871")
+		const mm2 = message.guild.roles.cache.get("739977086890147870")
+		const mm1e = "🔞"
+		const mm2e = "🚬"
+		let age = new Discord.RichEmbed()
+		  .setTitle("**Age**")
+		  .setDescription(`${mm1e} **▬** ${mm1.toString()}\n${mm2e} **▬** ${mm2.toString()}`)
+		  .setFooter('Veuillez réagir ci-dessous.')
+		 let agesend = await senderRole.send(age)
+		 agesend.react("🔞")
+		 agesend.react("🚬")
+		//
+		const os1 = message.guild.roles.cache.get("739977086864982077")
+		 const os2 = message.guild.roles.cache.get("739977086864982076")
+		 const os3 = message.guild.roles.cache.get("739977086579507350")
+		 const os4 = message.guild.roles.cache.get("739977086579507349")
+		 const os1e = "👅"
+		 const os2e = "🌈"
+		 const os3e = "👀"
+		 const os4e = "🏴"
+		 let OS = new Discord.RichEmbed()
+		  .setTitle("**Activités**")
+		  .setDescription(`${os1e} **▬** ${os1.toString()}\n${os2e} **▬** ${os2.toString()}\n${os3e} **▬** ${os3.toString()}\n${os4e} **▬** ${os4.toString()}`)
+		  .setFooter('Veuillez réagir ci-dessous.')
+		 let OSsend = await senderRole.send(OS)
+		 OSsend.react('👅')
+		 OSsend.react('🌈')
+		 OSsend.react("👀")
+		 OSsend.react("🏴")
+		//
+		 }
+})
+client.on('messageReactionAdd', (reaction, user) => {
+	const message = reaction.message;
+	const member = message.guild.members.cache.get(user.id);
+	const emojis = reaction.emoji.name;
+	const channel = message.guild.channels.cache.find(c => c.id === '739977087997444201')
+	//
+	const sexe1 = message.guild.roles.cache.get("739977086923571203")
+	const sexe2 = message.guild.roles.cache.get("739977086923571202")
+	//
+	const c1 = message.guild.roles.cache.get("739977086923571200")
+	const c2 = message.guild.roles.cache.get("739977086890147879")
+	const c3 = message.guild.roles.cache.get("739977086890147878")
+	//
+	const a1 = message.guild.roles.cache.get("739977086890147876")
+	const a2 = message.guild.roles.cache.get("739977086890147875")
+	const a3 = message.guild.roles.cache.get("739977086890147874")
+	const a4 = message.guild.roles.cache.get("739977086890147873")
+	//
+	const mm1 = message.guild.roles.cache.get("739977086890147871")
+	const mm2 = message.guild.roles.cache.get("739977086890147870")
+	//
+	const os1 = message.guild.roles.cache.get("739977086864982077")
+	const os2 = message.guild.roles.cache.get("739977086864982076")
+	const os3 = message.guild.roles.cache.get("739977086579507350")
+	const os4 = message.guild.roles.cache.get("739977086579507349")
+	//code
+	if (member.user.bot) return;
+	
+	if(["🚹", "🚺", "❤️", "💔", "💞", "🎮", "✏️", "㊙️", "🎵", "🔞", "🚬", "👅", "🌈", "👀", "🏴"].includes(emojis) && message.channel.id === channel.id) {
+		switch (emojis) {
+			case "🚹" :
+				member.roles.add(sexe1);
+				break;
+			case "🚺" :
+				member.roles.add(sexe2);
+				break;
+			case "❤️" :
+				member.roles.add(c1);
+				break;
+			case "💔" :
+				member.roles.add(c2);
+				break;
+			case "💞" :
+				member.roles.add(c2);
+				break;
+			case "🎮" :
+				member.roles.add(a1);
+				break;
+			case "✏️" :
+				member.roles.add(a2);
+				break;
+			case "㊙️" :
+				member.roles.add(a3);
+				break;
+			case "🎵" :
+				member.roles.add(a4);
+				break;
+			case "🔞" :
+				member.roles.add(mm1);
+				break;
+			case "🚬" :
+				member.roles.add(mm2);
+				break;
+			case "👅" :
+				member.roles.add(os1);
+				break;
+			case "🌈" :
+				member.roles.add(os2);
+				break;
+			case "👀" :
+				member.roles.add(os3);
+				break;
+			case "🏴" :
+				member.roles.add(os4);
+				break;
+		}
+	}
+	
+})
+client.on('messageReactionRemove', (reaction, user) => {
+	const message = reaction.message;
+	const member = message.guild.members.cache.get(user.id);
+	const emojis = reaction.emoji.name;
+	const channel = message.guild.channels.cache.find(c => c.id === '739977087997444201')
+	//
+	const sexe1 = message.guild.roles.cache.get("739977086923571203")
+	const sexe2 = message.guild.roles.cache.get("739977086923571202")
+	//
+	const c1 = message.guild.roles.cache.get("739977086923571200")
+	const c2 = message.guild.roles.cache.get("739977086890147879")
+	const c3 = message.guild.roles.cache.get("739977086890147878")
+	//
+	const a1 = message.guild.roles.cache.get("739977086890147876")
+	const a2 = message.guild.roles.cache.get("739977086890147875")
+	const a3 = message.guild.roles.cache.get("739977086890147874")
+	const a4 = message.guild.roles.cache.get("739977086890147873")
+	//
+	const mm1 = message.guild.roles.cache.get("739977086890147871")
+	const mm2 = message.guild.roles.cache.get("739977086890147870")
+	//
+	const os1 = message.guild.roles.cache.get("739977086864982077")
+	const os2 = message.guild.roles.cache.get("739977086864982076")
+	const os3 = message.guild.roles.cache.get("739977086579507350")
+	const os4 = message.guild.roles.cache.get("739977086579507349")
+	//code
+	if (member.user.bot) return;
+	
+	if(["🚹", "🚺", "❤️", "💔", "💞", "🎮", "✏️", "㊙️", "🎵", "🔞", "🚬", "👅", "🌈", "👀", "🏴"].includes(emojis) && message.channel.id === channel.id) {
+		switch (emojis) {
+			case "🚹" :
+				member.roles.remove(sexe1);
+				break;
+			case "🚺" :
+				member.roles.remove(sexe2);
+				break;
+			case "❤️" :
+				member.roles.remove(c1);
+				break;
+			case "💔" :
+				member.roles.remove(c2);
+				break;
+			case "💞" :
+				member.roles.remove(c2);
+				break;
+			case "🎮" :
+				member.roles.remove(a1);
+				break;
+			case "✏️" :
+				member.roles.remove(a2);
+				break;
+			case "㊙️" :
+				member.roles.remove(a3);
+				break;
+			case "🎵" :
+				member.roles.remove(a4);
+				break;
+			case "🔞" :
+				member.roles.remove(mm1);
+				break;
+			case "🚬" :
+				member.roles.remove(mm2);
+				break;
+			case "👅" :
+				member.roles.remove(os1);
+				break;
+			case "🌈" :
+				member.roles.remove(os2);
+				break;
+			case "👀" :
+				member.roles.remove(os3);
+				break;
+			case "🏴" :
+				member.roles.remove(os4);
+				break;
+		}
 	}
 })
 //Join
 client.on('guildMemberAdd', member => {
 let phrase = [
 `**Bienvenue à ${member.user} qui a rejoint le discord 💎.**`,
-`**Oh! Un ${member.user} est apparu ! Vite il faut le capturer ! <:pokeball:737021679657681029>**`,
+`**Oh! Un ${member.user} est apparu ! Vite il faut le capturer ! <:pokeball:740009482406461492>**`,
 `**OMG! Il y a le fameux ${member.user} qui est la ! ✨**`,
 `**${member.user} a rejoint la partie !** ☑️`,
 `**${member.user} est bien arrivé(e) a destination.** 🚀`
