@@ -264,49 +264,49 @@ client.on('messageReactionAdd', (reaction, user) => {
 	if(["🚹", "🚺", "❤️", "💔", "💞", "🎮", "✏️", "㊙️", "🎵", "🔞", "🚬", "👅", "🌈", "👀", "🏴"].includes(emojis) && message.channel.id === channel.id) {
 		switch (emojis) {
 			case "🚹" :
-				member.roles.add(sexe1);
+				member.addRole(sexe1);
 				break;
 			case "🚺" :
-				member.roles.add(sexe2);
+				member.addRole(sexe2);
 				break;
 			case "❤️" :
-				member.roles.add(c1);
+				member.addRole(c1);
 				break;
 			case "💔" :
-				member.roles.add(c2);
+				member.addRole(c2);
 				break;
 			case "💞" :
-				member.roles.add(c2);
+				member.addRole(c2);
 				break;
 			case "🎮" :
-				member.roles.add(a1);
+				member.addRole(a1);
 				break;
 			case "✏️" :
-				member.roles.add(a2);
+				member.addRole(a2);
 				break;
 			case "㊙️" :
-				member.roles.add(a3);
+				member.addRole(a3);
 				break;
 			case "🎵" :
-				member.roles.add(a4);
+				member.addRole(a4);
 				break;
 			case "🔞" :
-				member.roles.add(mm1);
+				member.addRole(mm1);
 				break;
 			case "🚬" :
-				member.roles.add(mm2);
+				member.addRole(mm2);
 				break;
 			case "👅" :
-				member.roles.add(os1);
+				member.addRole(os1);
 				break;
 			case "🌈" :
-				member.roles.add(os2);
+				member.addRole(os2);
 				break;
 			case "👀" :
-				member.roles.add(os3);
+				member.addRole(os3);
 				break;
 			case "🏴" :
-				member.roles.add(os4);
+				member.addRole(os4);
 				break;
 		}
 	}
@@ -343,49 +343,49 @@ client.on('messageReactionRemove', (reaction, user) => {
 	if(["🚹", "🚺", "❤️", "💔", "💞", "🎮", "✏️", "㊙️", "🎵", "🔞", "🚬", "👅", "🌈", "👀", "🏴"].includes(emojis) && message.channel.id === channel.id) {
 		switch (emojis) {
 			case "🚹" :
-				member.roles.remove(sexe1);
+				member.removeRole(sexe1);
 				break;
 			case "🚺" :
-				member.roles.remove(sexe2);
+				member.removeRole(sexe2);
 				break;
 			case "❤️" :
-				member.roles.remove(c1);
+				member.removeRole(c1);
 				break;
 			case "💔" :
-				member.roles.remove(c2);
+				member.removeRole(c2);
 				break;
 			case "💞" :
-				member.roles.remove(c2);
+				member.removeRole(c2);
 				break;
 			case "🎮" :
-				member.roles.remove(a1);
+				member.removeRole(a1);
 				break;
 			case "✏️" :
-				member.roles.remove(a2);
+				member.removeRole(a2);
 				break;
 			case "㊙️" :
-				member.roles.remove(a3);
+				member.removeRole(a3);
 				break;
 			case "🎵" :
-				member.roles.remove(a4);
+				member.removeRole(a4);
 				break;
 			case "🔞" :
-				member.roles.remove(mm1);
+				member.removeRole(mm1);
 				break;
 			case "🚬" :
-				member.roles.remove(mm2);
+				member.removeRole(mm2);
 				break;
 			case "👅" :
-				member.roles.remove(os1);
+				member.removeRole(os1);
 				break;
 			case "🌈" :
-				member.roles.remove(os2);
+				member.removeRole(os2);
 				break;
 			case "👀" :
-				member.roles.remove(os3);
+				member.removeRole(os3);
 				break;
 			case "🏴" :
-				member.roles.remove(os4);
+				member.removeRole(os4);
 				break;
 		}
 	}
