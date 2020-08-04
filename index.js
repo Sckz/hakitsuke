@@ -154,8 +154,7 @@ let sender2 = msg.guild.channels.get("739977087330549782")
 client.on('message', async message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	if (args[0] === "roles") {
-		 const senderRole = message.guild.channels.get("")
-		 const senderRole2 = message.guild.channels.get("")
+		 const senderRole = message.guild.channels.get("739977087997444201")
 		 //
 		 const sexe1 = message.guild.roles.cache.get("739977086923571203")
 		 const sexe2 = message.guild.roles.cache.get("739977086923571202")
